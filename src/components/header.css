@@ -1,0 +1,136 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background: #191021;
+    color: #fdfbff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+}
+
+.carousel {
+    display: flex;
+    margin-top: 60px;
+    width: 60vw;
+    height: 50vh;
+    overflow: hidden;
+    border-radius: 20px;
+    position: relative;
+}
+
+.top-buttons {
+    position: absolute;
+    top: 25px;
+    right: 40px;
+    display: flex;
+    gap: 12px;
+    z-index: 10;
+}
+
+.top-buttons button {
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn-login {
+    background: transparent;
+    color: #fdfbff;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.btn-login:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.btn-register {
+    background: #fdfbff;
+    color: #000;
+}
+
+.btn-register:hover {
+    background: #fdfbff;
+}
+
+.slides {
+    display: flex;
+    height: 100%;
+    width: 400%;
+    animation: slide 16s infinite;
+}
+
+.slide {
+    flex: 0 0 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.slide::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0, 0.6), rgba(0, 0, 0, 0.2));
+}
+
+.content {
+    position: absolute;
+    bottom: 20%;
+    left: 10%;
+    z-index: 5;
+    max-width: 600px;
+}
+
+.content h2 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.content p {
+    color: #fdfbff;
+    line-height: 1.6;
+    font-size: 1.1rem;
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(0%);
+    }
+    20% {
+        transform: translateX(0%);
+    }
+    25% {
+        transform: translateX(-100%);
+    }
+    45% {
+        transform: translateX(-100%);
+    }
+    50% {
+        transform: translateX(-200%);
+    }
+    70% {
+        transform: translateX(-200%);
+    }
+    75% {
+        transform: translateX(-300%);
+    }
+    95% {
+        transform: translateX(-300%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}
