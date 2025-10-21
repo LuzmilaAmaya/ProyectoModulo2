@@ -1,84 +1,85 @@
 .artistas-populares {
-    margin-top: 40px;
-    text-align: center;
-    color: #FDFBFF;
-    width: 100%;
+  margin-top: 40px;
+  text-align: center;
+  color: #fdfbff;
+  width: 100%;
 }
 
 .artistas-populares h2 {
-    font-size: 28px;
-    margin-bottom: 20px;
-    font-weight: 600;
+  font-size: 28px;
+  margin-bottom: 20px;
+  font-weight: 600;
 }
 
 .lista-artistas {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-    gap: 25px;
-    justify-content: center;
-    padding: 0 40px;
+  overflow-x: scroll;
+  margin-bottom: 2rem;
+  display: flex;
+  /* grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); */
+  gap: 25px;
+  padding: 0 40px;
+  max-width: 95vw;
 }
 
 .artista {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background: transparent;
-    padding: 0;
-    transition: all 0.3s ease;
-    cursor: pointer;
-    width: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: transparent;
+  padding: 0;
+  transition: all 0.3s ease;
+  cursor: pointer;
 }
 
 .artista:hover {
-    transform: scale(1.05);
+  transform: scale(1.05);
 }
 
 .artista img {
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
-    border-radius: 50%;
-    border: 3px solid #191021;
-    box-shadow: 0 0 10px rgba(40, 0, 44, 0.6);
-    margin-bottom: 10px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #191021;
+  box-shadow: 0 0 10px rgba(40, 0, 44, 0.6);
+  margin-bottom: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .artista img:hover {
-    transform: scale(1.1);
-    box-shadow: 0 0 20px rgba(40, 0, 44, 0.6);
+  transform: scale(1.1);
+  box-shadow: 0 0 20px rgba(40, 0, 44, 0.6);
 }
 
 .artista p {
-    font-size: 16px;
-    font-weight: 500;
-    color: #FDFBFF;
-    margin: 0;
+  font-size: 16px;
+  font-weight: 500;
+  color: #fdfbff;
+  margin: 0;
 }
 
 .artistas-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 40px;
-    margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
+  margin-bottom: 20px;
 }
 
 .ver-todos-btn {
-    margin-top: 2px;
-    background-color: transparent;
-    border: 1px solid #FDFBFF;
-    color: #FDFBFF;
-    padding: 8px 16px;
-    border-radius: 30px;
-    font-size: 14px;
-    cursor: pointer;
-    transition: all 0.3s ease;
+  margin-top: 2px;
+  background-color: transparent;
+  border: 1px solid #fdfbff;
+  color: #fdfbff;
+  padding: 8px 16px;
+  border-radius: 30px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 .ver-todos-btn:hover {
-    background-color: #FDFBFF;
-    color: #000;
-    transform: scale(1.05);
+  background-color: #fdfbff;
+  color: #000;
+  transform: scale(1.05);
 }

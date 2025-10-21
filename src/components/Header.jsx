@@ -26,7 +26,7 @@ export default function Header() {
     ];
 
     return (
-        <>
+        <div className="contenedor-carousel">
         <div className="carousel">
             <div className="top-buttons">
                 <button className="btn-login">Iniciar Sesion</button>
@@ -48,6 +48,6 @@ export default function Header() {
         ))}
           </div>
         </div>
-        </>
+        </div>
     );
 }
