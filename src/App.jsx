@@ -1,6 +1,7 @@
 import React from "react";
 import Header from "./components/Header";
 import Busqueda from "./components/Busqueda";
+import ArtistasPopulares from "./components/ArtistasPopulares";
 
 function App() {
   return (
@@ -8,6 +9,8 @@ function App() {
       <Header />
 
       <Busqueda />
+
+      <ArtistasPopulares />
     </div>
   )
 }
