@@ -1,21 +1,21 @@
 .busqueda {
-    margin-top: 30px;
-    display: flex;
-    justify-content: center;
-    width: 100%;
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
 }
 
 .busqueda input {
-    padding: 12px 18px;
-    border-radius: 25px;
-    border: 1px solid rgba(255, 255, 255, 0.4);
-    background: rgba(0, 0, 0, 0.4);
-    color: #fdfbff;
-    font-size: 16px;
-    outline: none;
-    width: 550%;
+  padding: 12px 18px;
+  border-radius: 25px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  background: rgba(0, 0, 0, 0.4);
+  color: #fdfbff;
+  font-size: 16px;
+  outline: none;
+  width: 550%;
 }
 
 .busqueda input::placeholder {
-    color: #fdfbff;
+  color: #fdfbff;
 }

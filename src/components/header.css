@@ -1,222 +1,228 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: "Poppins", sans-serif;
-    background: #191021;
-    color: #fdfbff;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    min-height: 100vh;
+  font-family: "Poppins", sans-serif;
+  background: #191021;
+  color: #fdfbff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
 }
 
 .carousel {
-    display: flex;
-    margin-top: 60px;
-    width: 60vw;
-    height: 50vh;
-    overflow: hidden;
-    border-radius: 20px;
-    position: relative;
+  display: flex;
+  justify-content: center;
+  margin-top: 60px;
+  width: 60vw;
+  height: 50vh;
+  overflow: hidden;
+  border-radius: 20px;
+  position: relative;
 }
 
 .top-buttons {
-    position: absolute;
-    top: 25px;
-    right: 40px;
-    display: flex;
-    gap: 12px;
-    z-index: 10;
+  position: absolute;
+  top: 25px;
+  right: 40px;
+  display: flex;
+  gap: 12px;
+  z-index: 10;
 }
 
 .top-buttons button {
-    padding: 10px 20px;
-    border-radius: 20px;
-    border: none;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.3s;
+  padding: 10px 20px;
+  border-radius: 20px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
 }
 
 .btn-login {
-    background: transparent;
-    color: #fdfbff;
-    border: 1px solid rgba(255, 255, 255, 0.3);
+  background: transparent;
+  color: #fdfbff;
+  border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .btn-login:hover {
-    background: rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.3);
 }
 
 .btn-register {
-    background: #fdfbff;
-    color: #000;
+  background: #fdfbff;
+  color: #000;
 }
 
 .btn-register:hover {
-    background: #fdfbff;
+  background: #fdfbff;
 }
 
 .slides {
-    display: flex;
-    height: 100%;
-    width: 400%;
-    animation: slide 16s infinite;
+  display: flex;
+  height: 100%;
+  width: 400%;
+  animation: slide 16s infinite;
 }
 
 .slide {
-    flex: 0 0 100%;
-    height: 100%;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    position: relative;
+  flex: 0 0 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
 }
 
 .slide::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(to top, rgba(0,0,0, 0.6), rgba(0, 0, 0, 0.2));
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.2));
 }
 
 .content {
-    position: absolute;
-    bottom: 20%;
-    left: 10%;
-    z-index: 5;
-    max-width: 600px;
+  position: absolute;
+  bottom: 20%;
+  left: 10%;
+  z-index: 5;
+  max-width: 600px;
 }
 
 .content h2 {
-    font-size: 3rem;
-    font-weight: 700;
-    margin-bottom: 15px;
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 15px;
 }
 
 .content p {
-    color: #fdfbff;
-    line-height: 1.6;
-    font-size: 1.1rem;
+  color: #fdfbff;
+  line-height: 1.6;
+  font-size: 1.1rem;
 }
 
 @keyframes slide {
-    0% {
-        transform: translateX(0%);
-    }
-    20% {
-        transform: translateX(0%);
-    }
-    25% {
-        transform: translateX(-100%);
-    }
-    45% {
-        transform: translateX(-100%);
-    }
-    50% {
-        transform: translateX(-200%);
-    }
-    70% {
-        transform: translateX(-200%);
-    }
-    75% {
-        transform: translateX(-300%);
-    }
-    95% {
-        transform: translateX(-300%);
-    }
-    100% {
-        transform: translateX(0%);
-    }
+  0% {
+    transform: translateX(0%);
+  }
+  20% {
+    transform: translateX(0%);
+  }
+  25% {
+    transform: translateX(-100%);
+  }
+  45% {
+    transform: translateX(-100%);
+  }
+  50% {
+    transform: translateX(-200%);
+  }
+  70% {
+    transform: translateX(-200%);
+  }
+  75% {
+    transform: translateX(-300%);
+  }
+  95% {
+    transform: translateX(-300%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
 }
 
 @media (max-width: 1024px) {
-    .carousel {
-        width: 80vw;
-        height: 45vh;
-    }
+  .carousel {
+    width: 80vw;
+    height: 45vh;
+  }
 
-    .content h2 {
-        font-size: 2.2rem;
-    }
+  .content h2 {
+    font-size: 2.2rem;
+  }
 
-    .content p {
-        font-size: 1rem;
-    }
+  .content p {
+    font-size: 1rem;
+  }
 
-    .top-buttons {
-        top: 20px;
-        right: 25px;
-    }
+  .top-buttons {
+    top: 20px;
+    right: 25px;
+  }
 
-    .top-buttons button {
-        padding: 8px 16px;
-    }
+  .top-buttons button {
+    padding: 8px 16px;
+  }
 }
 
 @media (max-width: 768px) {
-    .carousel {
-        width: 90vw;
-        height: 40vh;
-    }
+  .carousel {
+    width: 90vw;
+    height: 40vh;
+  }
 
-    .content {
-        bottom: 15%;
-        left: 8%;
-        max-width: 80%;
-    }
+  .content {
+    bottom: 15%;
+    left: 8%;
+    max-width: 80%;
+  }
 
-    .content h2 {
-        font-size: 1.8rem;
-    }
+  .content h2 {
+    font-size: 1.8rem;
+  }
 
-    .content p {
-        font-size: 0.95rem;
-    }
+  .content p {
+    font-size: 0.95rem;
+  }
 
-    .top-buttons {
-        flex-direction: column;
-        right: 15px;
-        top: 15px;
-    }
+  .top-buttons {
+    flex-direction: column;
+    right: 15px;
+    top: 15px;
+  }
 
-    .top-buttons button {
-        padding: 8px 14px;
-        font-size: 0.9rem;
-    }
+  .top-buttons button {
+    padding: 8px 14px;
+    font-size: 0.9rem;
+  }
 }
 
 @media (max-width: 480px) {
-    .carousel {
-        width: 95vw;
-        height: 35vh;
-        margin-top: 40px;
-    }
+  .carousel {
+    width: 95vw;
+    height: 35vh;
+    margin-top: 40px;
+  }
 
-    .content {
-        bottom: 12%;
-        left: 6%;
-    }
+  .content {
+    bottom: 12%;
+    left: 6%;
+  }
 
-    .content h2 {
-        font-size: 1.4rem;
-    }
+  .content h2 {
+    font-size: 1.4rem;
+  }
 
-    .content p {
-        font-size: 0.85rem;
-    }
+  .content p {
+    font-size: 0.85rem;
+  }
 
-    .top-buttons {
-        gap: 8px;
-    }
+  .top-buttons {
+    gap: 8px;
+  }
 
-    .top-buttons button {
-        padding: 6px 12px;
-        font-size: 0.8rem;
-    }
+  .top-buttons button {
+    padding: 6px 12px;
+    font-size: 0.8rem;
+  }
+}
+
+.contenedor-carousel {
+  display: flex;
+  justify-content: center;
 }
