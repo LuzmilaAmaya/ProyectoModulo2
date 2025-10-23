@@ -3,7 +3,7 @@ import Header from "../components/Header";
 import Busqueda from "../components/Busqueda";
 import ArtistasPopulares from "../components/ArtistasPopulares";
 import TodosLosArtistas from "../components/TodosLosArtistas";
-import Detalles from "../components/detalles/detalles";
+ import Detalles from "../pages/Detalles";
 export default function App() {
   return (
     <BrowserRouter>

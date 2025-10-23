@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "../../css/detalles.css"
 import { useNavigate } from "react-router-dom";
-import "../../js/id"
+import "../js/id"
 
 export default function detalles() {
    const navigate = useNavigate();
