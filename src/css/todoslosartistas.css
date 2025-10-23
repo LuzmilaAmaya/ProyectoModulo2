@@ -1,0 +1,92 @@
+.todos-artistas {
+  background-color: #191021;
+  color: white;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+  font-family: "Poppins", sans-serif;
+}
+.header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.header h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.header p {
+  font-size: 0.95rem;
+  color: #b6b6b6;
+}
+.buscador-container {
+  width: 100%;
+  max-width: 500px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+.buscador-container input {
+  width: 100%;
+  padding: 12px 20px;
+  border-radius: 50px;
+  border: none;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: white;
+  outline: none;
+  font-size: 1rem;
+  transition: background 0.3s ease;
+}
+.buscador-container input::placeholder {
+  color: #9b9b9b;
+}
+.grid-artistas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 30px;
+  width: 100%;
+  max-width: 900px;
+  justify-items: center;
+}
+.artista-item {
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.3s ease;
+  border-radius: 12px;
+  padding: 10px;
+}
+.artista-item img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+.artista-item:hover img {
+  transform: scale(1.05);
+}
+.artista-item.seleccionado img {
+  border: 4px solid #1ed760;
+}
+.artista-item p {
+  margin-top: 10px;
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+.confirmar-btn {
+  margin-top: 50px;
+  background-color: #fff;
+  color: black;
+  border: none;
+  padding: 14px 60px;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+.confirmar-btn:hover {
+  background-color: rgba(0, 0, 0, 0.4);
+}
