@@ -68,7 +68,7 @@
   transform: scale(1.05);
 }
 .artista-item.seleccionado img {
-  border: 4px solid #1ed760;
+  border: 4px solid #543470;
 }
 .artista-item p {
   margin-top: 10px;

@@ -4,7 +4,7 @@ export default function Detalles() {
   return (
     <div className='musica-page'>
       <section className='musica-detalle'>
-        <div>
+        <div className='album-cover'>
           <img src="https://imgs.search.brave.com/W4ttYeYvFCHF6jRSPA7VGpD17COj9mi_j04nFkz8eJI/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pLmlo/ZWFydC5jb20vdjMv/Y2F0YWxvZy9hcnRp/c3QvMzQzNjIwMzY_/b3BzPWZpdCg3MjAs/NzIwKQ" alt="yan block"/>
         </div>
 
@@ -33,7 +33,7 @@ export default function Detalles() {
       </section>
 
       <section className='masartistas'>
-        <h3>mas</h3>
+        <h3>Recomendados <span className='parati'> para ti</span></h3>
         <div className='listacanciones'>
           <div className='cancion'>
             <img src="https://imgs.search.brave.com/x4wAI5bkoTmdrCHiw9EtzzGPdbz7THCIyX9jrm7EDI8/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zdGF0/aWMucW9idXouY29t/L2ltYWdlcy9jb3Zl/cnMvcmIvaHUvYXpk/amtmNWFnaHVyYl82/MDAuanBn" alt="bien o mal" />
@@ -70,14 +70,10 @@ export default function Detalles() {
             </p>
             <button>play</button>
           </div>
-
-
         </div>
-
       </section>
     </div>
-  
-  )
+  );
 }
 
 

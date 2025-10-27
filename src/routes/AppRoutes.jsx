@@ -3,7 +3,8 @@ import Header from "../components/Header";
 import Busqueda from "../components/Busqueda";
 import ArtistasPopulares from "../components/ArtistasPopulares";
 import TodosLosArtistas from "../components/TodosLosArtistas";
- import Detalles from "../pages/Detalles";
+import Detalles from "../pages/Detalles";
+import ExplorarCategorias from "../components/ExplorarCategorias";
 export default function App() {
   return (
     <BrowserRouter>
@@ -16,12 +17,12 @@ export default function App() {
                 <Header />
                 <Busqueda />
                 <ArtistasPopulares />
+                <ExplorarCategorias />
               </>
             }
           />
           <Route path="/artistas" element={<TodosLosArtistas />} />
           <Route path="/detalles" element={<Detalles />} />
-          
         </Routes>
       </div>
     </BrowserRouter>
