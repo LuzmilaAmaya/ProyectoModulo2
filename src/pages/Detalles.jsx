@@ -1,13 +1,92 @@
-import React, { useState } from "react";
+import React from 'react'
 import "../css/detalles.css"
-import { useNavigate } from "react-router-dom";
-import "../js/id"
-
-export default function detalles() {
-   const navigate = useNavigate();
-   const [Detalles, setDetalles] = useState("");
-   const [seleccionados, setSeleccionados] = useState([]);
+export default function Detalles() {
   return (
-    <h1>holamundo</h1>
+    <div className='musica-page'>
+      <section className='musica-detalle'>
+        <div>
+          <img src="https://imgs.search.brave.com/W4ttYeYvFCHF6jRSPA7VGpD17COj9mi_j04nFkz8eJI/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pLmlo/ZWFydC5jb20vdjMv/Y2F0YWxvZy9hcnRp/c3QvMzQzNjIwMzY_/b3BzPWZpdCg3MjAs/NzIwKQ" alt="yan block"/>
+        </div>
+
+        <div className='albuminfo'>
+          <p className='genero'>Trap</p>
+          <h2 className='titulo'>333</h2>
+          <p className='artista'>Yan Block</p>
+          
+          <div className='detalles'>
+            <p>
+              Duracion: <strong>
+                3:00
+              </strong>
+            </p>
+            <p>
+              ID:plata268
+            </p>
+          </div>
+
+          <div className='botones'>
+            <button className='btn-reproducir'>▶</button>
+            <button className='btn-lista'>+ añadir a la lista</button>
+            <button className='btn-eliminar'>- eleiminar</button>
+          </div>
+        </div> 
+      </section>
+
+      <section className='masartistas'>
+        <h3>mas</h3>
+        <div className='listacanciones'>
+          <div className='cancion'>
+            <img src="https://imgs.search.brave.com/x4wAI5bkoTmdrCHiw9EtzzGPdbz7THCIyX9jrm7EDI8/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zdGF0/aWMucW9idXouY29t/L2ltYWdlcy9jb3Zl/cnMvcmIvaHUvYXpk/amtmNWFnaHVyYl82/MDAuanBn" alt="bien o mal" />
+            <p className='genero'>
+              trap
+            </p>
+            <h4>2.0.1.9</h4>
+            <p>
+              Trueno
+            </p>
+            <button>play</button>
+          </div>
+
+          <div className='cancion'>
+            <img src="https://imgs.search.brave.com/x4wAI5bkoTmdrCHiw9EtzzGPdbz7THCIyX9jrm7EDI8/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zdGF0/aWMucW9idXouY29t/L2ltYWdlcy9jb3Zl/cnMvcmIvaHUvYXpk/amtmNWFnaHVyYl82/MDAuanBn" alt="bien o mal" />
+            <p className='genero'>
+              trap
+            </p>
+            <h4>2.0.1.9</h4>
+            <p>
+              Trueno
+            </p>
+            <button>play</button>
+          </div>
+
+          <div className='cancion'>
+            <img src="https://imgs.search.brave.com/x4wAI5bkoTmdrCHiw9EtzzGPdbz7THCIyX9jrm7EDI8/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zdGF0/aWMucW9idXouY29t/L2ltYWdlcy9jb3Zl/cnMvcmIvaHUvYXpk/amtmNWFnaHVyYl82/MDAuanBn" alt="bien o mal" />
+            <p className='genero'>
+              trap
+            </p>
+            <h4>2.0.1.9</h4>
+            <p>
+              Trueno
+            </p>
+            <button>play</button>
+          </div>
+
+
+        </div>
+
+      </section>
+    </div>
+  
   )
 }
+
+
+
+    
+    
+     
+
+
+
+
+   
