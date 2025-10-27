@@ -1,0 +1,176 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  justify-content: center;
+}
+
+.login-modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 85vh;
+  border-radius: 10px;
+  background: linear-gradient(155deg,#0a0a0ae7 , #4f0381, #0a0a0ae7);
+  font-family: sans-serif;
+}
+.login-box {
+  background: #fff;
+  padding: 2.5rem 3rem;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(211, 0, 253, 0.301);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.login-box h2 {
+  margin-bottom: 1.5rem;
+  color: #4f0381;
+  font-weight: 600;
+}
+
+.form-group {
+  text-align: left;
+  margin-bottom: 1.2rem;
+}
+
+input[type="email"] {
+  color: #000000;
+  background-color: #ffffff;
+  border-color: #000000; 
+}
+input[type="password"] {
+  color: #000000;
+  background-color: #ffffff;
+  border-color: #000000; 
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.9rem;
+  color: #000000;
+  margin-bottom: 0.4rem;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 0.8rem;
+  border-radius: 8px;
+  border: 1px solid #cccccc;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form-group input:focus {
+  border-color: #4f0381;
+  box-shadow: 0 0 5px rgba(106, 4, 173, 0.3);
+  outline: none;
+}
+
+.login-btn {
+  width: 100%;
+  background-color: #4f0381;
+  color: #fff;
+  border: none;
+  padding: 0.9rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s, transform 0.1s;
+}
+
+.login-btn:hover {
+  background-color: #4f0381;
+}
+
+.login-btn:active {
+  transform: scale(0.98);
+}
+.politica-text{
+   margin-top: 1rem;
+  font-size: 0.5rem;
+  color: #000000;
+}
+
+.register-text {
+  margin-top: 1rem;
+  font-size: 0.5rem;
+  color: #000000;
+}
+
+.register-text a {
+  color: #4f0381;
+  text-decoration: none;
+  font-weight: 500;
+}
+.politica-text a{
+    color: #4f0381;
+  text-decoration: none;
+  font-weight: 500;
+}
+.register-text a:hover {
+  text-decoration: underline;
+}
+.login-box {
+  animation: fadeIn 0.6s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+} 
+@media (max-width: 480px) {
+  .login-box {
+    padding: 1.5rem 1.2rem;
+    max-width: 95%;
+  }
+
+  .login-box h2 {
+    font-size: 1.4rem;
+  }
+
+  .form-group label {
+    font-size: 0.85rem;
+  }
+
+  .form-group input {
+    font-size: 0.9rem;
+    padding: 0.7rem;
+  }
+
+  .login-btn {
+    font-size: 0.9rem;
+    padding: 0.8rem;
+  }
+
+  .politica-text,
+  .register-text {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .login-modal {
+    flex-direction: column;
+    padding: 2rem 1rem;
+  }
+
+  .login-box {
+    width: 100%;
+    max-width: 450px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .login-box {
+    max-width: 420px;
+  }
+}
