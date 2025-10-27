@@ -11,7 +11,7 @@
   align-items: center;
   height: 85vh;
   border-radius: 10px;
-  background: linear-gradient(155deg,#0a0a0ae7 , #4f0381, #0a0a0ae7);
+  background: linear-gradient(155deg,#0a0a0ae7 , #2c0f45, #0a0a0ae7);
   font-family: sans-serif;
 }
 .login-box {
@@ -25,12 +25,14 @@
 }
 
 .login-box h2 {
+  background-color: white;
   margin-bottom: 1.5rem;
-  color: #4f0381;
+  color: #2c0f45;
   font-weight: 600;
 }
 
 .form-group {
+  background-color: white;
   text-align: left;
   margin-bottom: 1.2rem;
 }
@@ -47,6 +49,7 @@ input[type="password"] {
 }
 
 .form-group label {
+  background-color: white;
   display: block;
   font-size: 0.9rem;
   color: #000000;
@@ -54,6 +57,7 @@ input[type="password"] {
 }
 
 .form-group input {
+  background-color: white;
   width: 100%;
   padding: 0.8rem;
   border-radius: 8px;
@@ -62,14 +66,14 @@ input[type="password"] {
 }
 
 .form-group input:focus {
-  border-color: #4f0381;
+  border-color: #2c0f45;
   box-shadow: 0 0 5px rgba(106, 4, 173, 0.3);
   outline: none;
 }
 
 .login-btn {
   width: 100%;
-  background-color: #4f0381;
+  background-color: #2c0f45;
   color: #fff;
   border: none;
   padding: 0.9rem;
@@ -81,31 +85,35 @@ input[type="password"] {
 }
 
 .login-btn:hover {
-  background-color: #4f0381;
+  background-color: #2c0f45;
 }
 
 .login-btn:active {
   transform: scale(0.98);
 }
 .politica-text{
+  background-color: white;
    margin-top: 1rem;
   font-size: 0.5rem;
   color: #000000;
 }
 
 .register-text {
+  background-color: white;
   margin-top: 1rem;
   font-size: 0.5rem;
   color: #000000;
 }
 
 .register-text a {
-  color: #4f0381;
+  background-color: white;
+  color: #2c0f45;
   text-decoration: none;
   font-weight: 500;
 }
 .politica-text a{
-    color: #4f0381;
+  background-color: white;
+    color: #2c0f45;
   text-decoration: none;
   font-weight: 500;
 }
