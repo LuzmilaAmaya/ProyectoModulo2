@@ -1,6 +1,155 @@
-*{
-  margin: 0;
-  padding: 0;
+.musica-page {
+  background-color: #150b25;
+  color: #fff;
+  min-height: 100vh;
+  font-family: "Poppins", sans-serif;
+  padding: 2rem;
   box-sizing: border-box;
+}
 
+.musica-detalle {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  background: #1f1133;
+  padding: 2rem;
+  border-radius: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.album-cover img {
+  width: 250px;
+  max-width: 100%;
+  border-radius: 12px;
+}
+
+.album-info {
+  flex: 1;
+  min-width: 280px;
+}
+
+.genero {
+  color: #a283ff;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+}
+
+.titulo {
+  font-size: 2.2rem;
+  font-weight: 700;
+}
+
+.artista {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+.detalles p {
+  margin: 4px 0;
+}
+
+.botones {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.btn-reproducir {
+  background: #7b2ff7;
+  color: white;
+  border: none;
+  padding: 0.7rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn-reproducir:hover {
+  background: #6622d1;
+}
+
+.btn-lista,
+.btn-eliminar {
+  background: #2a1c40;
+  color: #fff;
+  border: none;
+  padding: 0.7rem 1.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn-lista:hover,
+.btn-eliminar:hover {
+  background: #3c2960;
+}
+.masartista {
+  margin-top: 3rem;
+}
+
+.listacanciones {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.cancion {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #24143b;
+  border-radius: 15px;
+  padding: 1rem;
+  width: 180px;
+  text-align: center;
+  transition: transform 0.2s;
+  min-height: 350px;
+}
+.cancion:hover {
+  transform: translateY(-4px);
+}
+
+.cancion img {
+  width: 100%;
+  height: 180px;
+  border-radius: 10px;
+  margin-bottom: 0.5rem;
+  object-fit: cover;
+  background-color: #2a1c40; 
+}
+
+.cancion button {
+  margin-top: auto; 
+  background: #7b2ff7;
+  color: #fff;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  width: 100%;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.cancion button:hover {
+  background: #6622d1;
+}
+h3 {
+  text-align: center;
+}
+.parati {
+  color: #6622d1;
+}
+.cancion .titulo {
+  height: 3rem; 
+  overflow: hidden;
+  margin-bottom: 0.5rem;
+}
+.cancion .artista {
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
 }
