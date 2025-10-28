@@ -5,6 +5,7 @@ import ArtistasPopulares from "../components/ArtistasPopulares";
 import TodosLosArtistas from "../components/TodosLosArtistas";
 import Detalles from "../pages/Detalles";
 import ExplorarCategorias from "../components/ExplorarCategorias";
+import Barrainferior from "../components/Barrainferior";
 export default function App() {
   return (
     <BrowserRouter>
@@ -18,6 +19,7 @@ export default function App() {
                 <Busqueda />
                 <ArtistasPopulares />
                 <ExplorarCategorias />
+                <Barrainferior />
               </>
             }
           />
