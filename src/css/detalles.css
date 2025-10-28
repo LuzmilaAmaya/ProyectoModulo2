@@ -108,21 +108,23 @@
   width: 180px;
   text-align: center;
   transition: transform 0.2s;
+  min-height: 350px;
 }
-
 .cancion:hover {
   transform: translateY(-4px);
 }
 
 .cancion img {
   width: 100%;
+  height: 180px;
   border-radius: 10px;
   margin-bottom: 0.5rem;
   object-fit: cover;
+  background-color: #2a1c40; 
 }
 
 .cancion button {
-  margin-top: 0.5rem;
+  margin-top: auto; 
   background: #7b2ff7;
   color: #fff;
   border: none;
@@ -141,4 +143,13 @@ h3 {
 }
 .parati {
   color: #6622d1;
+}
+.cancion .titulo {
+  height: 3rem; 
+  overflow: hidden;
+  margin-bottom: 0.5rem;
+}
+.cancion .artista {
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
 }
