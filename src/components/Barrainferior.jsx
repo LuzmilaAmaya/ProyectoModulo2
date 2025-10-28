@@ -12,12 +12,12 @@ export default function Barrainferior() {
                 <span>Inicio</span>
             </div>
 
-            <div className='boton'>
+            <div className='boton' onClick={() => navigate ("/artistas")}>
                 <Compass size={22} />
                 <span>Explorar</span>
             </div>
 
-            <div className='boton'>
+            <div className='boton' onClick={() => navigate ("/detalles")}>
                 <Music2 size={22} />
                 <span>Mi Musica</span>
             </div>
