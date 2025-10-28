@@ -20,6 +20,10 @@ const vertodo = [
         imagen: "https://wallpaperaccess.com/full/1951266.jpg",
     },
     {
+        nombre: "Tego Calderon",
+        imagen: "https://i.pinimg.com/736x/e4/6a/45/e46a458ac87fd6f6f5e4c38d93962333.jpg",
+    },
+    {
         nombre: "Anuel aa",
         imagen: "https://tse4.mm.bing.net/th/id/OIP.xAvzGQS69bR4_ZKnANzXOgHaEK?rs=1&pid=ImgDetMain&o=7&rm=3",
     },
@@ -60,6 +64,10 @@ const vertodo = [
         imagen: "https://www.corazon.cl/wp-content/uploads/2015/01/PLAN-B-4.jpg",
     },
     {
+        nombre: "Wisil y Yandel",
+        imagen: "https://lastfm.freetls.fastly.net/i/u/ar0/8d1b084009af87230d00f764ea74644c.jpg",
+    },
+    {
         nombre: "Maluma",
         imagen: "https://images.hdqwalls.com/wallpapers/maluma-monochrome-5k-9y.jpg",
     },
@@ -74,6 +82,22 @@ const vertodo = [
     {
         nombre: "Paulo Londra",
         imagen: "https://tse2.mm.bing.net/th/id/OIP.p7F-F_yBZrT9IWuilNozhQHaE8?rs=1&pid=ImgDetMain&o=7&rm=3",
+    },
+    {
+        nombre: "Shakira",
+        imagen: "https://tse2.mm.bing.net/th/id/OIP.cleimCpqef9eBXzGPJOmIgHaJ4?rs=1&pid=ImgDetMain&o=7&rm=3",
+    },
+    {
+        nombre: "Emilia Mernes",
+        imagen: "https://tse1.mm.bing.net/th/id/OIP.BT3oTLxNBWY6q-AAOt3UCgHaEK?rs=1&pid=ImgDetMain&o=7&rm=3",
+    },
+    {
+        nombre: "Maria Becerra",
+        imagen: "https://tse4.mm.bing.net/th/id/OIP.-NZ93jY6EFuMM1nDEPMUhgHaE8?rs=1&pid=ImgDetMain&o=7&rm=3",
+    },
+    {
+        nombre: "Nicki Nicole",
+        imagen: "https://imgs.elpais.com.uy/dims4/default/d42ec4d/2147483647/strip/true/crop/1200x825+0+0/resize/1440x990!/quality/90/?url=https:%2F%2Fel-pais-uruguay-production-web.s3.us-east-1.amazonaws.com%2Fbrightspot%2F4e%2F09%2F977b18b449e698d84ba31fd74913%2Fnicki-nicole.jpg",
     },
     {
         nombre: "Luck Ra",
@@ -158,6 +182,22 @@ const vertodo = [
     {
         nombre: "No te va Gustar",
         imagen: "https://images.sk-static.com/images/media/img/col3/20200916-204251-739165.jpg",
+    },
+     {
+        nombre: "Acdc",
+        imagen: "https://tse4.mm.bing.net/th/id/OIP.Dev5aH7IaWx3IZ0gvo6BawHaHa?rs=1&pid=ImgDetMain&o=7&rm=3",
+    },
+    {
+        nombre: "Guns and Roses",
+        imagen: "https://i.scdn.co/image/80920b4fc80b6d970e2934eb8abe27014fc60632",
+    },
+    {
+        nombre: "Nirvana",
+        imagen: "https://images8.alphacoders.com/522/522662.jpg",
+    },
+    {
+        nombre: "Queen",
+        imagen: "https://wallpapercave.com/wp/wp2202399.png",
     },
  ];
 
