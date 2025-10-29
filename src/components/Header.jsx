@@ -1,5 +1,7 @@
 import React from "react";
 import "../css/header.css"
+import imglogo from "./img/imglogo.png";
+import imgusuario from "./img/imgusuario.png";
 
 export default function Header() {
     const slides = [
@@ -26,7 +28,11 @@ export default function Header() {
     ];
 
     return (
-        <div className="contenedor-carousel">
+      <div className="contenedor-carousel">
+        <header className="header">
+        <img src={imglogo} alt="Logo" className="logo" />
+        <img src={imgusuario} alt="Perfil" className="icono-usuario" />
+      </header>
         <div className="carousel">
             <div className="top-buttons">
                 <button className="btn-login">Iniciar Sesion</button>
