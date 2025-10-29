@@ -5,6 +5,12 @@ import { useNavigate } from "react-router-dom";
 
 export default function ArtistasPopulares() {
   const navigate = useNavigate();
+
+  // función para redirigir al artista
+  const irAPaginaArtista = (nombre) => {
+    navigate(`/artista/${encodeURIComponent(nombre)}`);
+  };
+
   return (
     <section className="artistas-populares">
       <div className="artistas-header">
@@ -15,12 +21,14 @@ export default function ArtistasPopulares() {
       </div>
 
       <div className="lista-artistas">
-        {artistas.map((artistas, index) => (
-          <div className="artista" key={index}>
-            <a href="#">
-              <img src={artistas.imagen} alt={artistas.nombre} />
-            </a>
-            <p>{artistas.nombre}</p>
+        {artistas.map((artista, index) => (
+          <div
+            className="artista"
+            key={index}
+            onClick={() => irAPaginaArtista(artista.nombre)}
+          >
+            <img src={artista.imagen} alt={artista.nombre} />
+            <p>{artista.nombre}</p>
           </div>
         ))}
       </div>
