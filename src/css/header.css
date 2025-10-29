@@ -4,6 +4,39 @@
   box-sizing: border-box;
 }
 
+.header {
+  width: 100%;
+  height: 70px;
+  background-color: #191021;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+
+.header img {
+  height: 45px;
+  cursor: pointer;
+}
+
+.logo {
+  height: 55px;
+  border-radius: 20px;
+}
+
+.icono-usuario {
+  height: 45px;
+  border-radius: 50%;
+}
+
+.contenedor-carousel {
+  margin-top: 100px;
+}
+
 body {
   font-family: "Poppins", sans-serif;
   background: #191021;
@@ -24,6 +57,7 @@ body {
   overflow: hidden;
   border-radius: 20px;
   position: relative;
+  top: -50px;
 }
 
 .top-buttons {
