@@ -18,17 +18,17 @@ export default function Detalles() {
     );
   }
 
-  // 🔥 Obtenemos todos los géneros de la canción seleccionada (divididos por "/")
+  
   const generosCancion = cancion.genero
     .toLowerCase()
     .split("/")
     .map(g => g.trim());
 
-  // 🔥 Recomendaciones: canciones que incluyan alguno de esos géneros
+  
   const recomendaciones = canciones.filter(c => {
-    if (c.id === cancion.id) return false; // no incluir la misma canción
+    if (c.id === cancion.id) return false; 
     const generosC = c.genero.toLowerCase().split("/").map(g => g.trim());
-    // Comprobamos si hay al menos un género en común
+   
     return generosC.some(g => generosCancion.includes(g));
   });
 
@@ -71,7 +71,7 @@ export default function Detalles() {
               </div>
             ))
           ) : (
-            <p>No hay canciones similares 😢</p>
+            <p>No hay canciones disponibles 😢😢</p>
           )}
         </div>
       </section>
