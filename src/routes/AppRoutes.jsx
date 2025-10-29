@@ -6,6 +6,7 @@ import TodosLosArtistas from "../components/TodosLosArtistas";
 import Detalles from "../pages/Detalles";
 import ExplorarCategorias from "../components/ExplorarCategorias";
 import Barrainferior from "../components/Barrainferior";
+import PaginaArtista from "../components/PaginaArtista";
 export default function App() {
   return (
     <BrowserRouter>
@@ -24,6 +25,7 @@ export default function App() {
             }
           />
           <Route path="/artistas" element={<TodosLosArtistas />} />
+          <Route path="/artista/:nombre" element={<PaginaArtista />} />
           <Route path="/detalles" element={<Detalles />} />
         </Routes>
       </div>

@@ -1,0 +1,118 @@
+/* .pagina-artista {
+  background: linear-gradient(to bottom, #3b207a, #000);
+  color: #fff;
+  min-height: 100vh;
+  padding-bottom: 100px;
+  font-family: "Inter", sans-serif;
+}
+
+
+.header-artista {
+  display: flex;
+  align-items: flex-end;
+  gap: 30px;
+  padding: 60px 80px 40px;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.imagen-grande {
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+}
+
+.info-artista h1 {
+  font-size: 60px;
+  margin: 0;
+  font-weight: 700;
+}
+
+.info-artista p {
+  font-size: 16px;
+  color: #b3b3b3;
+  margin-top: 10px;
+}
+
+
+.botones-artista {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 20px 80px;
+}
+
+.play-btn {
+  background-color: #1db954;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  font-size: 28px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.play-btn:hover {
+  transform: scale(1.05);
+}
+
+
+.canciones-artista {
+  padding: 20px 80px;
+}
+
+.canciones-artista h2 {
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+.canciones-artista ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.canciones-artista li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 10px;
+  border-radius: 6px;
+  transition: background 0.2s;
+  cursor: pointer;
+}
+
+.canciones-artista li:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.canciones-artista span {
+  color: #aaa;
+  font-size: 14px;
+}
+
+
+@media (max-width: 768px) {
+  .header-artista {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 40px 20px;
+  }
+
+  .imagen-grande {
+    width: 180px;
+    height: 180px;
+  }
+
+  .info-artista h1 {
+    font-size: 36px;
+  }
+
+  .canciones-artista {
+    padding: 20px;
+  }
+} */
