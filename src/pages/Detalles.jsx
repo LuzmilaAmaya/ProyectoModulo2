@@ -1,57 +1,80 @@
 import React from 'react';
+import { useParams } from 'react-router-dom';
 import "../css/detalles.css";
-import {canciones} from '../js/arraycanciones'; 
+import { canciones } from '../js/arraycanciones';
 
 export default function Detalles() {
-  const idcancion = "A1B2C3D4E";  
-  const recomendaciones = canciones.filter(canciones => canciones.genero.toLowerCase().includes("pop"));
+  const { nombreCancion } = useParams();
+  const decodedNombre = decodeURIComponent(nombreCancion);
+
+  const cancion = canciones.find(c => c.titulo === decodedNombre);
+
+  if (!cancion) {
+    return (
+      <div className='musica-page'>
+        <h2>Canción no encontrada 😢</h2>
+        <p>Verifica el nombre o vuelve a la página principal.</p>
+      </div>
+    );
+  }
+
+  // 🔥 Obtenemos todos los géneros de la canción seleccionada (divididos por "/")
+  const generosCancion = cancion.genero
+    .toLowerCase()
+    .split("/")
+    .map(g => g.trim());
+
+  // 🔥 Recomendaciones: canciones que incluyan alguno de esos géneros
+  const recomendaciones = canciones.filter(c => {
+    if (c.id === cancion.id) return false; // no incluir la misma canción
+    const generosC = c.genero.toLowerCase().split("/").map(g => g.trim());
+    // Comprobamos si hay al menos un género en común
+    return generosC.some(g => generosCancion.includes(g));
+  });
+
   return (
     <div className='musica-page'>
       <section className='musica-detalle'>
         <div className='album-cover'>
-          <img src="https://imgs.search.brave.com/W4ttYeYvFCHF6jRSPA7VGpD17COj9mi_j04nFkz8eJI/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pLmlo/ZWFydC5jb20vdjMv/Y2F0YWxvZy9hcnRp/c3QvMzQzNjIwMzY_/b3BzPWZpdCg3MjAs/NzIwKQ" alt="yan block"/>
+          <img src={cancion.img} alt={cancion.titulo} />
         </div>
 
         <div className='albuminfo'>
-          <p className='genero'>Trap</p>
-          <h2 className='titulo'>18</h2>
-          <p className='artista'>Yan Block</p>
-          
+          <p className='genero'>{cancion.genero}</p>
+          <h2 className='titulo'>{cancion.titulo}</h2>
+          <p className='artista'>{cancion.artista}</p>
+
           <div className='detalles'>
-            <p>Duracion: <strong>3:00</strong></p>
-            <p>id: <strong>{idcancion}</strong></p>
+            <p>Duración: <strong>{cancion.duracion}</strong></p>
+            <p>ID: <strong>{cancion.id}</strong></p>
           </div>
 
           <div className='botones'>
             <button className='btn-reproducir'>▶</button>
-            <button className='btn-lista'>+ añadir a la lista</button>
-            <button className='btn-eliminar'>- eleiminar</button>
+            <button className='btn-lista'>+ Añadir a la lista</button>
+            <button className='btn-eliminar'>- Eliminar</button>
           </div>
-        </div> 
+        </div>
       </section>
 
       <section className='masartistas'>
-        <h3>Recomendados <span className='parati'> para ti</span></h3>
+        <h3>Recomendados <span className='parati'>para ti</span></h3>
         <div className='listacanciones'>
-          {recomendaciones.map((cancion) => (
-            <div className='cancion' key={cancion.id}>
-              <img src={cancion.img} alt={cancion.titulo} />
-              <p className='genero'>{cancion.genero}</p>
-              <h4>{cancion.titulo}</h4>
-              <p>{cancion.artista}</p>
-              <button>play ▶</button>
-            </div>
-          ))}
+          {recomendaciones.length > 0 ? (
+            recomendaciones.map((c) => (
+              <div className='cancion' key={c.id}>
+                <img src={c.img} alt={c.titulo} />
+                <p className='genero'>{c.genero}</p>
+                <h4>{c.titulo}</h4>
+                <p>{c.artista}</p>
+                <button>Play ▶</button>
+              </div>
+            ))
+          ) : (
+            <p>No hay canciones similares 😢</p>
+          )}
         </div>
       </section>
-    </div>
-  );
+    </div>
+  );
 }
-    
-    
-     
-
-
-
-
-   
