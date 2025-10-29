@@ -7,8 +7,6 @@ export default function PaginaCategoria() {
   const { nombreCategoria } = useParams();
   const navigate = useNavigate();
   const categoria = decodeURIComponent(nombreCategoria).toLowerCase();
-
-  // Filtrar canciones que contengan el género
   const cancionesFiltradas = canciones.filter((c) =>
     c.genero.toLowerCase().includes(categoria)
   );

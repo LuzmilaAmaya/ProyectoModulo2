@@ -8,6 +8,7 @@ import ExplorarCategorias from "../components/ExplorarCategorias";
 import Barrainferior from "../components/Barrainferior";
 import PaginaArtista from "../components/PaginaArtista";
 import PaginaCategoria from "../components/PaginaCategoria";
+import Suscripcion from "../components/Suscripciones";
 export default function App() {
   return (
     <BrowserRouter>
@@ -29,6 +30,7 @@ export default function App() {
           <Route path="/artista/:nombre" element={<PaginaArtista />} />
           <Route path="/categoria/:nombreCategoria" element={<PaginaCategoria />} />
           <Route path="/detalles/:nombreCancion" element={<Detalles />} />
+          <Route path="/suscripcion" element={<Suscripcion />} />
         </Routes>
       </div>
     </BrowserRouter>

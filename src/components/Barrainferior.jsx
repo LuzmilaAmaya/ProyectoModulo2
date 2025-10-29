@@ -1,6 +1,6 @@
 import React from 'react'
 import "../css/barrainferior.css"
-import { Home, Compass, Music2, User } from "lucide-react";
+import { Home, Compass, CreditCard, User } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
 export default function Barrainferior() {
@@ -17,9 +17,9 @@ export default function Barrainferior() {
                 <span>Explorar</span>
             </div>
 
-            <div className='boton' onClick={() => navigate ("/detalles")}>
-                <Music2 size={22} />
-                <span>Mi Musica</span>
+            <div className='boton' onClick={() => navigate ("/suscripcion")}>
+                <CreditCard size={22} />
+                <span>Suscripcion</span>
             </div>
 
             <div className='boton'>
