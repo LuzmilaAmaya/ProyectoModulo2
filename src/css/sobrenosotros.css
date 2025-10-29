@@ -1,0 +1,73 @@
+/* Estilos para la sección Sobre Nosotros */
+.sobrenosotros-section {
+  background: linear-gradient(180deg, #0f0b16 0%, #191021 100%);
+  color: #fff;
+  padding: 60px 20px;
+}
+
+.sobrenosotros-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.title {
+  font-size: 2.4rem;
+  margin-bottom: 10px;
+}
+
+.lead {
+  color: #d9d5df;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-bottom: 30px;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 12px;
+  padding: 18px;
+  text-align: left;
+  overflow: hidden;
+}
+
+.card img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+.card h3 {
+  margin: 6px 0;
+}
+
+.card p {
+  color: #d0cbd6;
+  font-size: 0.95rem;
+}
+
+.contact h4 {
+  margin-bottom: 8px;
+}
+
+.contact p {
+  color: #cfc9d2;
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card img {
+    height: 200px;
+  }
+}

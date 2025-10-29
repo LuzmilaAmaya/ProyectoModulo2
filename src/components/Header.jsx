@@ -25,13 +25,18 @@ export default function Header() {
         },
     ];
 
-    return (
-        <div className="contenedor-carousel">
-        <div className="carousel">
-            <div className="top-buttons">
-                <button className="btn-login">Iniciar Sesion</button>
-                <button className="btn-register">Registrarse</button>
-            </div>
+  return (
+    <div className="contenedor-carousel">
+    <div className="carousel">
+      <div className="top-buttons">
+        <button className="btn-login">Iniciar Sesion</button>
+        <button className="btn-register">Registrarse</button>
+      </div>
+
+      <nav className="main-nav">
+        <a className="nav-link" href="#sobrenosotros">Sobre Nosotros</a>
+        <a className="nav-link" href="#">Inicio</a>
+      </nav>
 
        <div className="slides">
         {slides.map((slide, index) => (
