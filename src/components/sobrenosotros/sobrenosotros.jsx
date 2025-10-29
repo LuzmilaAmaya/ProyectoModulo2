@@ -16,35 +16,52 @@ export default function SobreNosotros() {
         <div className="grid">
           <div className="card">
             <img
-              src="https://st5.depositphotos.com/70796840/63605/v/450/depositphotos_636054014-stock-illustration-simspson-vector-cartoon-character.jpg"
-              alt="foto de homero "
+              src=""
+              alt="foto de agustin"
             />
             <h3 class="text-center">descripción</h3>
             <p>
-             Homero es una persona , la cual le encanta tomar cerveza y le gusta pegarle a su hijo 
             </p>
           </div>
 
           <div className="card">
             <img
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpLSh_fDe6Lfdhz39vF56M_XsglS6wYZKOog&s"
-              alt="foto de messi"
+              src=""
+              alt="foto de lautaro"
             />
             <h3>Descripcion</h3>
             <p>
-              Lionel Messi es un jugador de futbol , el cual salio campeon del mundo con Argentina en el año 2022
+                Hola, soy Lautaro Pérez, tengo 18 años y estudio Programación en RollingCode. Me apasiona la tecnología y la resolución de problemas. Disfruto aprender cosas nuevas, trabajar con código (aunque a veces lo rompa un poco antes de arreglarlo) y seguir mejorando cada día como desarrollador.
             </p>
           </div>
 
           <div className="card">
             <img
-              src="https://cdn-p.smehost.net/sites/5b3bac59eb36401694af3a241173447f/wp-content/uploads/2022/05/Captura-de-Pantalla-2022-05-10-a-las-9.58.24.png"
-              alt="foto de tini "
+             src=""
+             alt="foto de sofia "
             />
             <h3>Descripcion</h3>
             <p>
-              Tini Stoessel es una cantante y actriz argentina, conocida por su
-              papel en la serie "Violetta" y por su exitosa carrera musical.
+              
+            </p>
+          </div>
+           <div className="card">
+            <img
+             src=""
+             alt="foto de luzmila"
+            />
+            <h3>Descripcion</h3>
+            <p>
+              Hola!, soy Luzmila Amaya y tengo 18 años, actualmente me encuentro estudiando programación en RollingCode.
+            </p>
+          </div> <div className="card">
+            <img
+             src=""
+             alt="foto de mateo"
+            />
+            <h3>Descripcion</h3>
+            <p>
+              Me llamo mateo rosas, tengo 16 añosy estoy en 5to  año, y mientras estoy haciendo el curso de programacion en Rolling Code School
             </p>
           </div>
         </div>
