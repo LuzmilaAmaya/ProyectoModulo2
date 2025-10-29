@@ -26,7 +26,7 @@ export default function App() {
           />
           <Route path="/artistas" element={<TodosLosArtistas />} />
           <Route path="/artista/:nombre" element={<PaginaArtista />} />
-          <Route path="/detalles" element={<Detalles />} />
+          <Route path="/detalles/:nombreCancion" element={<Detalles />} />
         </Routes>
       </div>
     </BrowserRouter>
