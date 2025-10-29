@@ -8,7 +8,7 @@ import "./components/login.css"
 function App() {
   return (
     <div>
-      Hola Mundo!
+     HOOOLA MUNDOO!
     </div>
   );
 }

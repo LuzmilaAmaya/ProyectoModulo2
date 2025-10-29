@@ -22,7 +22,7 @@
 }
 
 .login-box h2 {
-  color: #fff;
+  color: #fdfdfd;
   text-align: center;
   margin-bottom: 20px;
 }
@@ -57,6 +57,7 @@
 .login-btn {
   width: 100%;
   background-color: #321a4e;
+
   color: #fff;
   border: none;
   padding: 12px;
