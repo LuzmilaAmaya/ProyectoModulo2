@@ -1,0 +1,43 @@
+.pagina-categoria {
+  color: #fff;
+  padding: 2rem;
+  text-align: center;
+}
+
+.titulo-categoria {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.grid-canciones {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 20px;
+}
+
+.card-cancion {
+  background-color: #422b57;
+  border-radius: 12px;
+  padding: 1rem;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.card-cancion:hover {
+  transform: scale(1.05);
+}
+
+.card-cancion img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.card-cancion h4 {
+  margin: 5px 0;
+}
+
+.genero {
+  font-size: 0.9rem;
+  color: #a46bff;
+}
