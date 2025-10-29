@@ -1,14 +1,14 @@
 import React from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import artistas from "../js/artistasPopulares";
+import { canciones } from "../js/arraycanciones"; // importa el array
+import CardCancion from "../components/CardCancion";
 import "../css/paginaartista.css";
 
 export default function PaginaArtista() {
   const { nombre } = useParams();
   const navigate = useNavigate();
 
-    // Busca los datos del artista
-    console.log(nombre)
   const artista = artistas.find((a) => a.nombre === nombre);
 
   if (!artista) {
@@ -19,6 +19,11 @@ export default function PaginaArtista() {
       </div>
     );
   }
+
+  // Filtra las canciones de este artista
+  const cancionesArtista = canciones.filter((c) =>
+    c.artista.toLowerCase().includes(artista.nombre.toLowerCase())
+  );
 
   return (
     <div className="pagina-artista">
@@ -32,13 +37,16 @@ export default function PaginaArtista() {
 
       <div className="canciones-artista">
         <h2>Canciones populares</h2>
-        <ul>
-          {artista.canciones?.map((cancion, i) => (
-            <li key={i}>
-              {cancion.titulo} <span>{cancion.duracion}</span>
-            </li>
-          )) || <p>No hay canciones disponibles.</p>}
-        </ul>
+
+        {cancionesArtista.length > 0 ? (
+          <div className="grilla-canciones">
+            {cancionesArtista.map((cancion) => (
+              <CardCancion key={cancion.id} cancion={cancion} />
+            ))}
+          </div>
+        ) : (
+          <p>No hay canciones disponibles.</p>
+        )}
       </div>
     </div>
   );

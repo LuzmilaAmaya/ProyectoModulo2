@@ -116,3 +116,37 @@
     padding: 20px;
   }
 } */
+
+.pagina-artista {
+  color: white;
+  padding: 20px;
+}
+
+.header-artista {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.imagen-grande {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.info-artista h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.canciones-artista h2 {
+  margin-bottom: 20px;
+}
+
+.grilla-canciones {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 20px;
+}
