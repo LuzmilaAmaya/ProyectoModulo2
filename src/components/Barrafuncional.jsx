@@ -7,8 +7,6 @@ import categorias from "../js/categorias";
 
 export default function Inicio() {
   const [busqueda, setBusqueda] = useState("");
-
-  // Filtrar artistas y categorías según lo que se escribe
   const artistasFiltrados = artistas.filter((a) =>
     a.nombre.toLowerCase().includes(busqueda.toLowerCase())
   );

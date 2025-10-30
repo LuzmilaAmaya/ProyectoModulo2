@@ -1,8 +1,8 @@
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import { useForm } from "react-hook-form";
-import { useNavigate } from "react-router-dom";
 import "../css/Registro.css";
+import { Navigate, useNavigate } from "react-router-dom";
 
 export default function Registro() {
   const {
@@ -18,7 +18,7 @@ export default function Registro() {
     },
   });
 
-  const navegacion = useNavigate();
+  const navigate = useNavigate();
 
   function obtenerDelLocalStorage() {
     const usuariosDelLocalStorage =
@@ -101,11 +101,9 @@ export default function Registro() {
               {errors.password?.message}
             </Form.Control.Feedback>
           </Form.Group>
-
-          <Button variant="primary" type="submit" className="login-btn">
-            Registrarse
+          <Button type="submit" className="login-btn"  onClick={() => navigate("/")}>
+            Iniciar Sesión
           </Button>
-
           <p className="register-text mt-3">
             ¿Ya tienes cuenta?{" "}
             <a href="/iniciarsesion">Inicia sesión aquí</a>
