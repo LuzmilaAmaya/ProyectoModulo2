@@ -15,7 +15,6 @@
   overflow-y: scroll;
   margin-bottom: 2rem;
   display: flex;
-  /* grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); */
   gap: 25px;
   padding: 0 40px;
   max-width: 95vw;

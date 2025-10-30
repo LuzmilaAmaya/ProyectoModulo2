@@ -1,13 +1,11 @@
 const vertodo = [
   {
     nombre: "Duki",
-    imagen:
-      "https://lastfm.freetls.fastly.net/i/u/ar0/4fb3a9bb838bac3ca4f3ecc9c5f9d929.jpg",
+    imagen: "https://lastfm.freetls.fastly.net/i/u/ar0/4fb3a9bb838bac3ca4f3ecc9c5f9d929.jpg",
   },
   {
     nombre: "Ysy a",
-    imagen:
-      "https://tse1.mm.bing.net/th/id/OIP.Faeh9GuNqLJS8p4tRqA9QAHaHa?rs=1&pid=ImgDetMain&o=7&rm=3",
+    imagen: "https://tse1.mm.bing.net/th/id/OIP.Faeh9GuNqLJS8p4tRqA9QAHaHa?rs=1&pid=ImgDetMain&o=7&rm=3",
   },
   {
     nombre: "Trueno",
