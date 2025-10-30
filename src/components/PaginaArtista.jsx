@@ -1,7 +1,7 @@
 import React from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import artistas from "../js/artistasPopulares";
-import { canciones } from "../js/arraycanciones"; // importa el array
+import { canciones } from "../js/arraycanciones";
 import CardCancion from "../components/CardCancion";
 import "../css/paginaartista.css";
 
@@ -19,8 +19,6 @@ export default function PaginaArtista() {
       </div>
     );
   }
-
-  // Filtra las canciones de este artista
   const cancionesArtista = canciones.filter((c) =>
     c.artista.toLowerCase().includes(artista.nombre.toLowerCase())
   );

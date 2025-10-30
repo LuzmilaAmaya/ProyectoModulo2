@@ -181,7 +181,6 @@
   }
 }
 
-/* 🚨 Estilo para mensaje de error personalizado */
 .error-msg {
   background: rgba(255, 50, 50, 0.1);
   border: 1px solid #ff5c5c;
