@@ -22,7 +22,7 @@ export default function TodosLosArtistas() {
 
   return (
     <section className="todos-artistas">
-      <div className="header">
+      <div className="titulo-seccion">
         <h2>Elige tus artistas favoritos</h2>
         <p>Esto nos ayudará a personalizar tus recomendaciones</p>
       </div>
