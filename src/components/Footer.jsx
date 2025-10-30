@@ -35,7 +35,6 @@ export default function Footer() {
     <footer className="footer-modern text-light py-5">
       <div className="container text-center text-md-start">
         <div className="row gy-4 align-items-center">
-          {/* LOGO */}
           <div className="col-12 col-md-3 text-center text-md-start">
             <img
               src="https://res.cloudinary.com/dw05hk9ht/image/upload/v1761780928/image_mty8ph.png"
@@ -46,8 +45,6 @@ export default function Footer() {
               Descubrí, compartí y disfrutá de tu música favorita 🎵
             </p>
           </div>
-
-          {/* LINKS */}
           <div className="col-12 col-md-3 text-center">
             <h5 className="footer-title mb-3">Navegación</h5>
             <ul className="list-unstyled footer-links text-center">
@@ -65,8 +62,6 @@ export default function Footer() {
               </li>
             </ul>
           </div>
-
-          {/* CONTACTO */}
           <div className="col-12 col-md-3 text-center">
             <h5 className="footer-title mb-3">Contáctanos</h5>
             <ul className="list-unstyled footer-links text-center">
@@ -83,8 +78,6 @@ export default function Footer() {
               </li>
             </ul>
           </div>
-
-          {/* REDES */}
           <div className="col-12 col-md-3 text-center">
             <h5 className="footer-title mb-3">Nuestras Redes</h5>
             <div className="d-flex justify-content-center gap-4">
@@ -119,7 +112,7 @@ export default function Footer() {
             </div>
           </div>
         </div>
-
+        
         <hr className="footer-divider my-4" />
         <p className="text-center small text-secondary mb-0">
           © {new Date().getFullYear()} Melix Music. Todos los derechos

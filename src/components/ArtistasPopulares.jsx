@@ -1,12 +1,10 @@
 import React from "react";
 import "../css/artistaspopulares.css";
-import artistas from "../js/artistasPopulares";
 import { useNavigate } from "react-router-dom";
 
-export default function ArtistasPopulares() {
+export default function ArtistasPopulares({ artistas }) {
   const navigate = useNavigate();
 
-  // función para redirigir al artista
   const irAPaginaArtista = (nombre) => {
     navigate(`/artista/${encodeURIComponent(nombre)}`);
   };
@@ -21,16 +19,20 @@ export default function ArtistasPopulares() {
       </div>
 
       <div className="lista-artistas">
-        {artistas.map((artista, index) => (
-          <div
-            className="artista"
-            key={index}
-            onClick={() => irAPaginaArtista(artista.nombre)}
-          >
-            <img src={artista.imagen} alt={artista.nombre} />
-            <p>{artista.nombre}</p>
-          </div>
-        ))}
+        {artistas.length > 0 ? (
+          artistas.map((artista, index) => (
+            <div
+              className="artista"
+              key={index}
+              onClick={() => irAPaginaArtista(artista.nombre)}
+            >
+              <img src={artista.imagen} alt={artista.nombre} />
+              <p>{artista.nombre}</p>
+            </div>
+          ))
+        ) : (
+          <p>No se encontraron artistas</p>
+        )}
       </div>
     </section>
   );
