@@ -1,5 +1,6 @@
 import Swal from "sweetalert2";
 import "../css/footer.css";
+import { useNavigate } from "react-router-dom";
 
 export default function Footer() {
   

@@ -2,6 +2,7 @@ import React from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import "../css/detalles.css";
 import { canciones } from '../js/arraycanciones';
+import Footer from '../components/Footer.jsx';
 
 export default function Detalles() {
   const navigate = useNavigate();
@@ -86,6 +87,8 @@ export default function Detalles() {
           volver al inicio
         </button>
       </div>
+
+      <Footer></Footer>
     </div>
   );
 }

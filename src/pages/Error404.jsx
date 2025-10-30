@@ -14,7 +14,6 @@ export default function Error404() {
         backgroundColor: "#120C18",
       }}
     >
-      {/* 🎬 Animación de fondo */}
       <DotLottieReact
         src="https://lottie.host/cf0cb7aa-72d7-4100-bbd7-ecb471dadf51/Gk9yO5uJW1.lottie"
         loop
