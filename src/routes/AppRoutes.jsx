@@ -9,33 +9,35 @@ import Barrainferior from "../components/Barrainferior";
 import PaginaArtista from "../components/PaginaArtista";
 import PaginaCategoria from "../components/PaginaCategoria";
 import Suscripcion from "../components/Suscripciones";
+import Pago from "../components/Pago";
 export default function App() {
   return (
     <BrowserRouter>
-      <div className="container py-4">
-        <Routes>
-          <Route
-            path="/"
-            element={
-              <>
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <>
+              <div className="container py-4">
                 <Header />
                 <Busqueda />
                 <ArtistasPopulares />
                 <ExplorarCategorias />
                 <Barrainferior />
-              </>
-            }
-          />
-          <Route path="/artistas" element={<TodosLosArtistas />} />
-          <Route path="/artista/:nombre" element={<PaginaArtista />} />
-          <Route
-            path="/categoria/:nombreCategoria"
-            element={<PaginaCategoria />}
-          />
-          <Route path="/detalles/:nombreCancion" element={<Detalles />} />
-          <Route path="/suscripcion" element={<Suscripcion />} />
-        </Routes>
-      </div>
+              </div>
+            </>
+          }
+        />
+        <Route path="/artistas" element={<TodosLosArtistas />} />
+        <Route path="/artista/:nombre" element={<PaginaArtista />} />
+        <Route
+          path="/categoria/:nombreCategoria"
+          element={<PaginaCategoria />}
+        />
+        <Route path="/detalles/:nombreCancion" element={<Detalles />} />
+        <Route path="/suscripcion" element={<Suscripcion />} />
+        <Route path="/pago" element={<Pago />} />
+      </Routes>
     </BrowserRouter>
   );
 }

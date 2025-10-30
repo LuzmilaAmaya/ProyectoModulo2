@@ -1,0 +1,181 @@
+.pago-wrapper {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #191021;
+}
+
+.pago-container {
+  max-width: 450px;
+  width: 90%;
+  padding: 30px;
+  background: #1c1326;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.4);
+  color: #fff;
+}
+
+.pago-container h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #f1f1f1;
+}
+
+.pago-form label {
+  display: block;
+  margin: 10px 0 6px;
+  font-weight: 500;
+}
+
+.fila {
+  display: flex;
+  gap: 10px;
+}
+
+.fila input {
+  flex: 1;
+}
+
+.pago-form input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #3a2d4b;
+  background: #191021;
+  color: #fff;
+  font-size: 0.95rem;
+  box-sizing: border-box;
+  outline: none;
+}
+
+.pago-form input:focus {
+  border-color: #8b5cf6;
+}
+
+.pago-form button {
+  width: 100%;
+  margin-top: 25px;
+  padding: 12px;
+  background: #8b5cf6;
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.pago-form button:hover {
+  background: #7c3aed;
+}
+
+.seguro {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+.card-number-wrapper {
+  position: relative;
+}
+
+.card-number-wrapper input {
+  padding-right: 130px;
+}
+
+.card-icons {
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  transform: translateY(-50%);
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  pointer-events: none;
+}
+
+.card-icons img {
+  height: 22px;
+  width: auto;
+  opacity: 0.9;
+  filter: brightness(0.95);
+}
+
+.btn-volver {
+  display: block;
+  margin: 25px auto 0;
+  background-color: transparent;
+  color: #b3aaff;
+  border: 1px solid #b3aaff;
+  padding: 10px 25px;
+  border-radius: 8px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-volver:hover {
+  background-color: #b3aaff;
+  color: #1c102b;
+  transform: scale(1.05);
+}
+
+.animacion-pago,
+.animacion-exito {
+  text-align: center;
+  padding: 40px 0;
+}
+
+.loader {
+  border: 4px solid #2e1c44;
+  border-top: 4px solid #8b5cf6;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  margin: 0 auto 20px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.checkmark {
+  font-size: 50px;
+  color: #22c55e;
+  animation: pop 0.4s ease-out;
+}
+
+@keyframes pop {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.animacion-exito p {
+  color: #b8f2c8;
+  font-weight: 500;
+  margin-top: 10px;
+  font-size: 1.2rem;
+}
+
+.animacion-pago p {
+  color: #c5b3f9;
+  font-size: 1.1rem;
+}
+
+@media (max-width: 480px) {
+  .card-icons img {
+    height: 18px;
+  }
+}
