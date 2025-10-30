@@ -1,0 +1,73 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+.footer-modern {
+  background-color: #120C18;
+  color: #fff;
+  border-top: 2px solid #2C0F45;
+  font-family: "Poppins", sans-serif;
+  position: relative;
+  z-index: 10;
+}
+
+/* LOGO */
+.footer-logo {
+  width: 40dvh;
+  object-fit: contain;
+  filter: drop-shadow(0 0 6px rgba(140, 75, 202, 0.5));
+}
+
+/* TITULOS */
+.footer-title {
+  color: #bca7ce;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* LINKS */
+.footer-links li {
+  margin-bottom: 6px;
+}
+
+.footer-links a {
+  color: #ddd;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #8c4bca;
+  text-shadow: 0 0 6px rgba(140, 75, 202, 0.6);
+}
+
+/* REDES */
+.social-icon {
+  width: 30px;
+  height: 30px;
+  filter: grayscale(1) brightness(0.8);
+  transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+  filter: brightness(1.5) drop-shadow(0 0 6px #8c4bca);
+  transform: scale(1.1);
+}
+
+/* DIVIDER */
+.footer-divider {
+  border-color: #2C0F45;
+  opacity: 0.5;
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+  .footer-modern {
+    text-align: center;
+  }
+  .footer-links {
+    padding: 0;
+  }
+}
