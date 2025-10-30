@@ -45,7 +45,8 @@ export default function SobreNosotros() {
             <p></p>
           </div>
           <div className="card">
-            <img src="https://res.cloudinary.com/dw05hk9ht/image/upload/v1761847310/WhatsApp_Image_2025-10-30_at_2.17.07_PM_rlvmqi.jpg" alt="foto de luzmila" />
+            <img src=""
+             alt="foto de luzmila" />
             <h3>Descripcion</h3>
             <p>
               Hola!, soy Luzmila Amaya y tengo 18 años, actualmente me encuentro
