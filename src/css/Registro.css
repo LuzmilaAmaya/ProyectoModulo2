@@ -1,0 +1,79 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  justify-content: center;
+}
+
+.login-modal {
+  background: linear-gradient(#191021, #2c0f45, #191021);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  min-height: 100vh;
+}
+
+.login-box {
+  background-color: #2c0f45;
+  border-radius: 20px;
+  padding: 60px 80px;
+  width: 700px;
+  max-width: 700px;
+  box-shadow: 0 4px 12px rgba(171, 3, 238, 0.473);
+}
+
+.login-box h2 {
+  color: #fdfdfd;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.form-group {
+  color: white;
+  margin-bottom: 20px;
+}
+
+.input-icon {
+  background-color: #321a4e !important;
+  color: white !important;
+  border: 1px solid #ccc !important;
+}
+
+.input-icon::placeholder {
+  color: #d6d6d6;
+}
+
+.login-btn {
+  width: 100%;
+  background-color: #321a4e;
+  color: #fff;
+  border: none;
+  padding: 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.login-btn:hover {
+  background-color: #120c18;
+}
+
+.politica-text,
+.register-text {
+  text-align: center;
+  font-size: 14px;
+  color: #f8f8f8;
+  margin-top: 20px;
+}
+
+.politica-text a,
+.register-text a {
+  color: #aa0eda;
+  text-decoration: none;
+}
+
+.politica-text a:hover,
+.register-text a:hover {
+  text-decoration: underline;
+}
