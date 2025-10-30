@@ -31,6 +31,7 @@
 .fila {
   display: flex;
   gap: 10px;
+  align-items: end;
 }
 
 .fila input {
@@ -83,7 +84,7 @@
 }
 
 .card-number-wrapper input {
-  padding-right: 130px;
+  padding-right: 153px;
 }
 
 .card-icons {

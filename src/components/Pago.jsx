@@ -31,12 +31,11 @@ export default function Pago() {
     setTarjetas(nuevasTarjetas);
     localStorage.setItem("tarjetas", JSON.stringify(nuevasTarjetas));
 
-    // Animación de pago
     setPagando(true);
     setTimeout(() => {
       setPagando(false);
       setExito(true);
-      setTimeout(() => navigate("/"), 2500); // redirige al inicio
+      setTimeout(() => navigate("/"), 2500); 
     }, 2000);
   };
 
