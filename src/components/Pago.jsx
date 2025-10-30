@@ -11,12 +11,12 @@ export default function Pago() {
   const [tarjetas, setTarjetas] = useState([]);
   const [pagando, setPagando] = useState(false);
   const [exito, setExito] = useState(false);
+  const [error, setError] = useState("");
 
   const navigate = useNavigate();
 
   useEffect(() => {
-    const tarjetasGuardadas =
-      JSON.parse(localStorage.getItem("tarjetas")) || [];
+    const tarjetasGuardadas = JSON.parse(localStorage.getItem("tarjetas")) || [];
     setTarjetas(tarjetasGuardadas);
   }, []);
 
@@ -26,6 +26,14 @@ export default function Pago() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    if (!nombre || !apellido || !numero || !fecha || !cvv) {
+      setError("⚠️ Por favor, completá todos los campos antes de continuar.");
+      return;
+    }
+
+    setError("");
+
     const nuevaTarjeta = { nombre, apellido, numero, fecha, cvv };
     const nuevasTarjetas = [...tarjetas, nuevaTarjeta];
     setTarjetas(nuevasTarjetas);
@@ -35,7 +43,7 @@ export default function Pago() {
     setTimeout(() => {
       setPagando(false);
       setExito(true);
-      setTimeout(() => navigate("/"), 2500); 
+      setTimeout(() => navigate("/"), 2500);
     }, 2000);
   };
 
@@ -63,14 +71,12 @@ export default function Pago() {
                   value={nombre}
                   onChange={(e) => setNombre(e.target.value)}
                   placeholder="Nombre"
-                  required
                 />
                 <input
                   type="text"
                   value={apellido}
                   onChange={(e) => setApellido(e.target.value)}
                   placeholder="Apellido"
-                  required
                 />
               </div>
 
@@ -81,7 +87,6 @@ export default function Pago() {
                   value={numero}
                   onChange={(e) => setNumero(e.target.value)}
                   placeholder="1234 1234 1234 1234"
-                  required
                 />
                 <div className="card-icons" aria-hidden="true">
                   <img
@@ -111,7 +116,6 @@ export default function Pago() {
                     value={fecha}
                     onChange={(e) => setFecha(e.target.value)}
                     placeholder="MM/AA"
-                    required
                   />
                 </div>
                 <div>
@@ -121,10 +125,11 @@ export default function Pago() {
                     value={cvv}
                     onChange={(e) => setCvv(e.target.value)}
                     placeholder="123"
-                    required
                   />
                 </div>
               </div>
+
+              {error && <p className="error-msg">{error}</p>}
 
               <button type="submit">Pagar ahora</button>
             </form>
