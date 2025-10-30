@@ -2,10 +2,9 @@ import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
-import { guardarEnSessionStorage } from "../../utils/localStorage.js";
-import "../css/Registro.css"; 
+import "../css/Registro.css";
 
-export default function FormLogin() {
+export default function Registro() {
   const {
     register,
     handleSubmit,
@@ -22,90 +21,94 @@ export default function FormLogin() {
   const navegacion = useNavigate();
 
   function obtenerDelLocalStorage() {
-    return JSON.parse(localStorage.getItem("usuarios")) || [];
+    const usuariosDelLocalStorage =
+      JSON.parse(localStorage.getItem("usuarios")) || [];
+    return usuariosDelLocalStorage;
+  }
+
+  function guardarEnLocalStorage(nuevoListado) {
+    localStorage.setItem("usuarios", JSON.stringify(nuevoListado));
   }
 
   function onSubmit(data) {
-    const usuariosDelLocalStorage = obtenerDelLocalStorage();
-    const usuarioExistente = usuariosDelLocalStorage.find(
-      (usuario) => usuario.email === data.email
-    );
+    try {
+      const nuevoUsuario = {
+        id: Date.now(),
+        email: data.email,
+        password: data.password,
+        createdAt: new Date().toISOString(),
+      };
 
-    if (!usuarioExistente) {
-      alert("EMAIL o PASSWORD INCORRECTO - EMAIL!");
-      return;
+      const listadoUsuariosLS = obtenerDelLocalStorage();
+      guardarEnLocalStorage([...listadoUsuariosLS, nuevoUsuario]);
+
+      alert("Usuario registrado con éxito ✅");
+      reset();
+      navegacion("/"); // redirige al home o login
+    } catch (error) {
+      console.log(error);
+      alert("No se pudo crear el usuario ❌");
     }
-
-    if (usuarioExistente.password !== data.password) {
-      alert("EMAIL o PASSWORD INCORRECTO - PASSWORD!");
-      return;
-    }
-
-    guardarEnSessionStorage("usuario", usuarioExistente);
-    alert("Inicio de sesión EXITOSO!");
-    reset();
-    navegacion("/");
   }
 
   return (
     <div className="login-modal">
       <div className="login-box">
-        <h2>Iniciar Sesión</h2>
+        <h2>Crear Cuenta</h2>
         <Form onSubmit={handleSubmit(onSubmit)}>
-          <div className="form-group">
-            <Form.Label>Email</Form.Label>
-            <Form.Control
-              className="input-icon"
-              type="email"
-              placeholder="Ingrese su email"
-              isInvalid={errors.email}
-              {...register("email", {
-                required: "El campo es obligatorio",
-                minLength: {
-                  value: 5,
-                  message: "Debe ingresar al menos 5 caracteres",
-                },
-                pattern: {
-                  value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
-                  message: "Debe ingresar un email válido",
-                },
-              })}
-            />
+          <Form.Group className="form-group" controlId="formBasicEmail">
+            <div className="input-icon">
+              <span className="icon">📧</span>
+              <Form.Control
+                type="email"
+                placeholder="Ingrese su email"
+                isInvalid={errors.email}
+                {...register("email", {
+                  required: "El campo es obligatorio",
+                  minLength: {
+                    value: 5,
+                    message: "Debe ingresar al menos 5 caracteres",
+                  },
+                  pattern: {
+                    value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+                    message: "Debe ingresar un email válido",
+                  },
+                })}
+              />
+            </div>
             <Form.Control.Feedback type="invalid">
               {errors.email?.message}
             </Form.Control.Feedback>
-          </div>
+          </Form.Group>
 
-          <div className="form-group">
-            <Form.Label>Password</Form.Label>
-            <Form.Control
-              className="input-icon"
-              type="password"
-              placeholder="Ingrese su password"
-              isInvalid={errors.password}
-              {...register("password", {
-                required: "El campo es obligatorio",
-                minLength: {
-                  value: 4,
-                  message: "Debe ingresar al menos 4 caracteres",
-                },
-              })}
-            />
+          <Form.Group className="form-group" controlId="formBasicPassword">
+            <div className="input-icon">
+              <span className="icon">🔒</span>
+              <Form.Control
+                type="password"
+                placeholder="Ingrese su contraseña"
+                isInvalid={errors.password}
+                {...register("password", {
+                  required: "El campo es obligatorio",
+                  minLength: {
+                    value: 4,
+                    message: "Debe ingresar al menos 4 caracteres",
+                  },
+                })}
+              />
+            </div>
             <Form.Control.Feedback type="invalid">
               {errors.password?.message}
             </Form.Control.Feedback>
-          </div>
+          </Form.Group>
 
-          <Button type="submit" className="login-btn">
-            Iniciar Sesión
+          <Button variant="primary" type="submit" className="login-btn">
+            Registrarse
           </Button>
 
-          <p className="politica-text">
-            Al iniciar sesión aceptas nuestra{" "}
-            <a href="#">Política de Privacidad</a>
-          </p>
-          <p className="register-text">
-            ¿No tienes cuenta? <a href="/login">Regístrate aquí</a>
+          <p className="register-text mt-3">
+            ¿Ya tienes cuenta?{" "}
+            <a href="/iniciarsesion">Inicia sesión aquí</a>
           </p>
         </Form>
       </div>

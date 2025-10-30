@@ -1,17 +1,16 @@
-*{
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  justify-content: center;
 }
 
 .login-modal {
-  background: linear-gradient(#191021, #2c0f45, #191021);
+  background: linear-gradient(#191021, #2C0F45, #191021);
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 40px;
   min-height: 100vh;
+  padding: 40px;
 }
 
 .login-box {
@@ -27,21 +26,36 @@
   color: #fdfdfd;
   text-align: center;
   margin-bottom: 30px;
+  font-weight: 600;
 }
 
 .form-group {
   color: white;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 }
 
 .input-icon {
-  background-color: #321a4e !important;
-  color: white !important;
-  border: 1px solid #ccc !important;
+  display: flex;
+  align-items: center;
+  background-color: #321a4e;
+  border-radius: 5px;
+  padding: 8px 12px;
+  border: 1px solid #ccc;
 }
 
-.input-icon::placeholder {
-  color: #d6d6d6;
+.input-icon .icon {
+  color: #f0edf1;
+  margin-right: 10px;
+  font-size: 18px;
+}
+
+.input-icon input {
+  border: none;
+  outline: none;
+  background: none;
+  flex: 1;
+  font-size: 16px;
+  color: white;
 }
 
 .login-btn {
@@ -53,6 +67,7 @@
   border-radius: 5px;
   cursor: pointer;
   font-size: 16px;
+  transition: background-color 0.3s ease;
 }
 
 .login-btn:hover {
@@ -64,7 +79,6 @@
   text-align: center;
   font-size: 14px;
   color: #f8f8f8;
-  margin-top: 20px;
 }
 
 .politica-text a,
