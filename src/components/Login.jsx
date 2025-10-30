@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { FaEnvelope, FaLock, FaEdit, FaTrash, FaUser, FaImage } from "react-icons/fa";
 import Swal from "sweetalert2";
-import "../components/Login.css";
+import "../css/Login.css";
 function Login() {
   const [username, setUsername] = useState("");
   const [profile, setProfile] = useState("");

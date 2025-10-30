@@ -1,8 +1,8 @@
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import { useForm } from "react-hook-form";
-import { useNavigate } from "react-router-dom";
-import { guardarEnSessionStorage } from "../../utils/localStorage.js";
+import { Navigate, useNavigate } from "react-router-dom";
+// import { guardarEnSessionStorage } from "../../utils/localStorage.js";
 import "../css/Registro.css"; 
 
 export default function FormLogin() {
@@ -19,7 +19,7 @@ export default function FormLogin() {
     },
   });
 
-  const navegacion = useNavigate();
+  const navigate = useNavigate();
 
   function obtenerDelLocalStorage() {
     return JSON.parse(localStorage.getItem("usuarios")) || [];
@@ -96,7 +96,7 @@ export default function FormLogin() {
             </Form.Control.Feedback>
           </div>
 
-          <Button type="submit" className="login-btn">
+          <Button type="submit" className="login-btn"  onClick={() => navigate("/")}>
             Iniciar Sesión
           </Button>
 
