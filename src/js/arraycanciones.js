@@ -306,7 +306,7 @@ export const canciones = [
   artista: "Arcángel",
   genero: "Reggaeton",
   duracion: "3:35",
-  img: "https://via.placeholder.com/150?text=Hace+Mucho+Tiempo"
+  img: "https://i1.sndcdn.com/artworks-000045616300-hnsrum-t500x500.jpg"
 },
 {
   id: "G5E6L7L8O",
