@@ -1,9 +1,10 @@
 import React from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import "../css/detalles.css";
 import { canciones } from '../js/arraycanciones';
 
 export default function Detalles() {
+  const navigate = useNavigate();
   const { nombreCancion } = useParams();
   const decodedNombre = decodeURIComponent(nombreCancion);
 
@@ -13,22 +14,19 @@ export default function Detalles() {
     return (
       <div className='musica-page'>
         <h2>Canción no encontrada 😢</h2>
-        <p>Verifica el nombre o vuelve a la página principal.</p>
+        
       </div>
     );
   }
 
-  
   const generosCancion = cancion.genero
     .toLowerCase()
     .split("/")
     .map(g => g.trim());
 
-  
   const recomendaciones = canciones.filter(c => {
-    if (c.id === cancion.id) return false; 
+    if (c.id === cancion.id) return false;
     const generosC = c.genero.toLowerCase().split("/").map(g => g.trim());
-   
     return generosC.some(g => generosCancion.includes(g));
   });
 
@@ -50,7 +48,7 @@ export default function Detalles() {
           </div>
 
           <div className='botones'>
-            <button className='btn-reproducir'>▶</button>
+            <button className='btn-reproducir' onClick={()=> navigate("*")}>▶</button>
             <button className='btn-lista'>+ Añadir a la lista</button>
             <button className='btn-eliminar'>- Eliminar</button>
           </div>
@@ -63,11 +61,18 @@ export default function Detalles() {
           {recomendaciones.length > 0 ? (
             recomendaciones.map((c) => (
               <div className='cancion' key={c.id}>
-                <img src={c.img} alt={c.titulo} />
+                <img 
+                  src={c.img} 
+                  alt={c.titulo} 
+                  onClick={() => navigate(`/detalles/${encodeURIComponent(c.titulo)}`)} 
+                  className='clickable-img'
+                />
                 <p className='genero'>{c.genero}</p>
                 <h4>{c.titulo}</h4>
                 <p>{c.artista}</p>
-                <button>Play ▶</button>
+                <button onClick={() => navigate(`/detalles/${encodeURIComponent(c.titulo)}`)}>
+                  Play ▶
+                </button>
               </div>
             ))
           ) : (
@@ -75,6 +80,12 @@ export default function Detalles() {
           )}
         </div>
       </section>
+
+      <div>
+        <button className='button-volver' onClick={() => navigate("/")}>
+          volver al inicio
+        </button>
+      </div>
     </div>
   );
 }

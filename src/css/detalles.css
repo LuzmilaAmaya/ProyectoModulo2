@@ -111,10 +111,11 @@
 }
 
 .cancion {
+  cursor: pointer;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: #24143b;
+  background-color: #3c2960;
   border-radius: 15px;
   padding: 1rem;
   width: 180px;
@@ -164,6 +165,12 @@ h3 {
 .cancion .artista {
   font-size: 0.95rem;
   margin-bottom: 1rem;
+}
+.button-volver {
+  border-radius: 2opx;
+  margin-top: 30px;
+  background-color: #6622d1;
+  color: white;
 }
 /* adaptado */
 
