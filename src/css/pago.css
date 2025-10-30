@@ -180,3 +180,28 @@
     height: 18px;
   }
 }
+
+/* 🚨 Estilo para mensaje de error personalizado */
+.error-msg {
+  background: rgba(255, 50, 50, 0.1);
+  border: 1px solid #ff5c5c;
+  color: #ff8b8b;
+  padding: 10px 15px;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: 500;
+  margin-top: 15px;
+  animation: fadeIn 0.3s ease;
+  box-shadow: 0 0 8px rgba(255, 50, 50, 0.3);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

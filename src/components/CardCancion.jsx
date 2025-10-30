@@ -6,7 +6,6 @@ export default function CardCancion({ cancion }) {
   const navigate = useNavigate();
 
   const handleClick = () => {
-    // Navega a /Detalles/:nombreCancion (usamos encodeURIComponent para evitar problemas con espacios)
     navigate(`/Detalles/${encodeURIComponent(cancion.titulo)}`);
   };
 
