@@ -2,9 +2,10 @@ import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import { useForm } from "react-hook-form";
 import "../css/Registro.css";
-import { Navigate, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import Swal from "sweetalert2";
 
-export default function Registro() {
+export default function InicioSesion() {
   const {
     register,
     handleSubmit,
@@ -20,42 +21,55 @@ export default function Registro() {
 
   const navigate = useNavigate();
 
-  function obtenerDelLocalStorage() {
-    const usuariosDelLocalStorage =
-      JSON.parse(localStorage.getItem("usuarios")) || [];
-    return usuariosDelLocalStorage;
+  function obtenerUsuariosDelLocalStorage() {
+    const usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
+    return usuarios;
   }
 
-  function guardarEnLocalStorage(nuevoListado) {
-    localStorage.setItem("usuarios", JSON.stringify(nuevoListado));
-  }
-
-  function onSubmit(data) {
+  function iniciarSesion(data) {
     try {
-      const nuevoUsuario = {
-        id: Date.now(),
-        email: data.email,
-        password: data.password,
-        createdAt: new Date().toISOString(),
-      };
+      const usuarios = obtenerUsuariosDelLocalStorage();
+      const usuarioEncontrado = usuarios.find(
+        (u) => u.email === data.email && u.password === data.password
+      );
 
-      const listadoUsuariosLS = obtenerDelLocalStorage();
-      guardarEnLocalStorage([...listadoUsuariosLS, nuevoUsuario]);
+      if (usuarioEncontrado) {
+        // Guardar sesión en sessionStorage
+        sessionStorage.setItem(
+          "usuarioActivo",
+          JSON.stringify(usuarioEncontrado)
+        );
 
-      alert("Usuario registrado con éxito ✅");
-      reset();
-      navegacion("/"); // redirige al home o login
+        Swal.fire({
+          icon: "success",
+          title: "¡Bienvenido!",
+          text: `Has iniciado sesión correctamente`,
+        });
+
+        reset();
+        navigate("/admin");
+      } else {
+        Swal.fire({
+          icon: "error",
+          title: "Oops...",
+          text: "Email o contraseña incorrectos",
+        });
+      }
     } catch (error) {
       console.log(error);
-      alert("No se pudo crear el usuario ❌");
+      Swal.fire({
+        icon: "error",
+        title: "Error",
+        text: "No se pudo iniciar sesión",
+      });
     }
   }
 
   return (
     <div className="login-modal">
       <div className="login-box">
-        <h2>Crear Cuenta</h2>
-        <Form onSubmit={handleSubmit(onSubmit)}>
+        <h2>Iniciar Sesión</h2>
+        <Form onSubmit={handleSubmit(iniciarSesion)}>
           <Form.Group className="form-group" controlId="formBasicEmail">
             <div className="input-icon">
               <span className="icon">📧</span>
@@ -101,12 +115,13 @@ export default function Registro() {
               {errors.password?.message}
             </Form.Control.Feedback>
           </Form.Group>
-          <Button type="submit" className="login-btn"  onClick={() => navigate("/")}>
+
+          <Button type="submit" className="login-btn">
             Iniciar Sesión
           </Button>
+
           <p className="register-text mt-3">
-            ¿Ya tienes cuenta?{" "}
-            <a href="/iniciarsesion">Inicia sesión aquí</a>
+            ¿No tienes cuenta? <a href="/registro">Regístrate aquí</a>
           </p>
         </Form>
       </div>

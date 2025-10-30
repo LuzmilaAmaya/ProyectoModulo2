@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { Button, Form } from "react-bootstrap";
 import { useForm } from "react-hook-form";
 import Swal from "sweetalert2";
-import { editarCancion } from "../../services/AdminService.js";
+import { editarCancion } from "../../services/AdminService";
 
 export default function EditarCancion({
   showEditar,

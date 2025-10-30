@@ -16,6 +16,7 @@ import Login from "../components/Login";
 import React, { useState } from "react";
 import artistas from "../js/artistasPopulares";
 import categorias from "../js/categorias";
+import AdminPage from "../pages/AdminPage";
 export default function App() {
   const [busqueda, setBusqueda] = useState("");
 
@@ -43,6 +44,7 @@ export default function App() {
             </div>
           }
         />
+        <Route path="/admin" element={<AdminPage />} />
         <Route path="/artistas" element={<TodosLosArtistas />} />
         <Route path="/artista/:nombre" element={<PaginaArtista />} />
         <Route
@@ -59,4 +61,3 @@ export default function App() {
     </BrowserRouter>
   );
 }
-

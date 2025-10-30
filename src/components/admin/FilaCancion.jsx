@@ -1,6 +1,6 @@
 import React from "react";
 import Swal from "sweetalert2";
-import { eliminarCancion } from "../../services/AdminService.js";
+import { eliminarCancion } from "../../services/AdminService";
 
 export default function FilaCancion({
   cancion,

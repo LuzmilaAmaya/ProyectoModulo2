@@ -1,7 +1,7 @@
 import React from "react";
 import { Button, Form, Modal } from "react-bootstrap";
 import { useForm } from "react-hook-form";
-import { agregarCancion } from "../../services/AdminService.js";
+import { agregarCancion } from "../../services/AdminService";
 import Swal from "sweetalert2";
 
 export default function NuevaCancion({

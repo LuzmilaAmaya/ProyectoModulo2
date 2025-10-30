@@ -1,7 +1,4 @@
-import {
-  obtenerCanciones,
-  guardarCanciones,
-} from "../services/AdminService.js";
+import { obtenerCanciones, guardarCanciones } from "../services/AdminService";
 
 const STORAGE_KEY = "canciones";
 
@@ -13,7 +10,6 @@ export const cancionesIniciales = [
     genero: "Urbano",
     album: "Bzrp Music Sessions",
     duracion: "3:40",
-    
   },
   {
     portadaUrl: "https://example.com/portada2.jpg",
@@ -22,7 +18,6 @@ export const cancionesIniciales = [
     genero: "Cumbia",
     album: "Cumbia 420",
     duracion: "3:15",
-   
   },
   {
     portadaUrl: "https://example.com/portada3.jpg",
@@ -31,7 +26,6 @@ export const cancionesIniciales = [
     genero: "Trap",
     album: "Parte de Mí",
     duracion: "3:22",
-    
   },
   {
     portadaUrl: "https://example.com/portada4.jpg",
@@ -40,7 +34,6 @@ export const cancionesIniciales = [
     genero: "Urbano",
     album: "Sin Cadenas",
     duracion: "3:45",
-    
   },
   {
     portadaUrl: "https://example.com/portada5.jpg",
@@ -49,7 +42,6 @@ export const cancionesIniciales = [
     genero: "Rap",
     album: "La Noche",
     duracion: "3:50",
-
   },
   {
     portadaUrl: "https://example.com/portada6.jpg",
@@ -66,7 +58,6 @@ export const cancionesIniciales = [
     genero: "Trap",
     album: "Quédate",
     duracion: "3:20",
-
   },
   {
     portadaUrl: "https://example.com/portada8.jpg",
@@ -75,7 +66,6 @@ export const cancionesIniciales = [
     genero: "Pop",
     album: "Dejate Llevar",
     duracion: "3:00",
-
   },
 ];
 

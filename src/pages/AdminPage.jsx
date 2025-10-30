@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
 import Swal from "sweetalert2";
-import TablaCanciones from "../components/admin/TablaCanciones.jsx";
+import TablaCanciones from "../components/admin/TablaCancion.jsx";
 import NuevaCancion from "../components/admin/NuevaCancion.jsx";
-import { obtenerCanciones } from "../services/AdminService.js";
+import { obtenerCanciones } from "../services/AdminService.jsx";
 import EditarCancion from "../components/admin/EditarCancion.jsx";
-import { inicializarCanciones } from "../constants/canciones.js";
-import "../css/adminpage.css";
+import { inicializarCanciones } from "../js/canciones.js";
+import "../css/adminTable.css";
 
 export default function AdminPage() {
   const [cancionBuscada, setCancionBuscada] = useState("");
@@ -85,7 +85,7 @@ export default function AdminPage() {
       <TablaCanciones
         canciones={cancionesFiltradas}
         setShowEditar={setShowEditar}
-        setEditarCancion={setCancionEditar} 
+        setEditarCancion={setCancionEditar}
         fetchCanciones={fetchCanciones}
       />
 
