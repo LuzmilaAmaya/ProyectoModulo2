@@ -11,22 +11,36 @@ import PaginaCategoria from "../components/PaginaCategoria";
 import Suscripcion from "../components/Suscripciones";
 import Pago from "../components/Pago";
 import Error404 from "../pages/Error404";
+import Registro from "../components/Registro";
+import Login from "../components/Login";
+import React, { useState } from "react";
+import artistas from "../js/artistasPopulares";
+import categorias from "../js/categorias";
 export default function App() {
+  const [busqueda, setBusqueda] = useState("");
+
+  const artistasFiltrados = artistas.filter((a) =>
+    a.nombre.toLowerCase().includes(busqueda.toLowerCase())
+  );
+
+  const categoriasFiltradas = categorias.filter((c) =>
+    c.nombre.toLowerCase().includes(busqueda.toLowerCase())
+  );
+
   return (
     <BrowserRouter>
       <Routes>
         <Route
           path="/"
           element={
-            <>
-              <div className="container py-4">
-                <Header />
-                <Busqueda />
-                <ArtistasPopulares />
-                <ExplorarCategorias />
-                <Barrainferior />
-              </div>
-            </>
+            <div className="container py-4">
+              <Header />
+              <Busqueda onBuscar={setBusqueda} />
+              <ArtistasPopulares artistas={artistasFiltrados} />
+              <ExplorarCategorias categorias={categoriasFiltradas} />
+
+              <Barrainferior />
+            </div>
           }
         />
         <Route path="/artistas" element={<TodosLosArtistas />} />
@@ -36,6 +50,8 @@ export default function App() {
           element={<PaginaCategoria />}
         />
         <Route path="/detalles/:nombreCancion" element={<Detalles />} />
+        <Route path="/iniciarsesion" element={<Registro />} />
+        <Route path="/register" element={<Login />} />
         <Route path="/suscripcion" element={<Suscripcion />} />
         <Route path="/pago" element={<Pago />} />
         <Route path="*" element={<Error404 />} />
@@ -43,3 +59,4 @@ export default function App() {
     </BrowserRouter>
   );
 }
+

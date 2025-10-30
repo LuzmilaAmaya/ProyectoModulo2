@@ -2,8 +2,10 @@ import React from "react";
 import "../css/header.css";
 import imglogo from "./img/imglogo.png";
 import imgusuario from "./img/imgusuario.png";
+import { useNavigate } from "react-router-dom";
 
 export default function Header() {
+  const navigate = useNavigate();
   const slides = [
     {
       img: "https://a-v2.sndcdn.com/assets/images/front-hero-artist-fan-534fb484.jpeg",
@@ -34,9 +36,9 @@ export default function Header() {
         <img src={imgusuario} alt="Perfil" className="icono-usuario" />
       </header>
       <div className="carousel">
-        <div className="top-buttons">
-          <button className="btn-login">Iniciar Sesion</button>
-          <button className="btn-register">Registrarse</button>
+       <div className="top-buttons">
+          <button className="btn-login" onClick={() => navigate("/iniciarsesion")}>Iniciar Sesion</button>
+          <button className="btn-register" onClick={() => navigate("/register")}>Registrarse</button>
         </div>
 
         <div className="slides">
