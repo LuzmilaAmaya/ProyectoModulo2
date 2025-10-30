@@ -5,7 +5,6 @@ import NuevaCancion from "../components/admin/NuevaCancion.jsx";
 import { obtenerCanciones } from "../services/AdminService.jsx";
 import EditarCancion from "../components/admin/EditarCancion.jsx";
 import { inicializarCanciones } from "../js/canciones.js";
-import "../css/adminTable.css";
 
 export default function AdminPage() {
   const [cancionBuscada, setCancionBuscada] = useState("");
