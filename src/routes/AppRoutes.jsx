@@ -28,7 +28,10 @@ export default function App() {
           />
           <Route path="/artistas" element={<TodosLosArtistas />} />
           <Route path="/artista/:nombre" element={<PaginaArtista />} />
-          <Route path="/categoria/:nombreCategoria" element={<PaginaCategoria />} />
+          <Route
+            path="/categoria/:nombreCategoria"
+            element={<PaginaCategoria />}
+          />
           <Route path="/detalles/:nombreCancion" element={<Detalles />} />
           <Route path="/suscripcion" element={<Suscripcion />} />
         </Routes>

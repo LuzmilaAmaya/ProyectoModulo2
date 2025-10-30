@@ -5,17 +5,10 @@ import ArtistasPopulares from "./components/ArtistasPopulares";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import TodosLosArtistas from "./components/TodosLosArtistas";
+import AppRoutes from "./routes/AppRoutes";
 
 function App() {
-  return (
-    <>
-      <Header />
-
-      <Busqueda />
-
-      <ArtistasPopulares />
-    </>
-  )
+  return <AppRoutes />;
 }
 
 export default App;
