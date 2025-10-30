@@ -165,3 +165,88 @@ h3 {
   font-size: 0.95rem;
   margin-bottom: 1rem;
 }
+@media (max-width: 992px) {
+  .musica-detalle {
+    flex-direction: column;
+    text-align: center;
+    max-height: none;
+    padding: 1.5rem;
+  }
+
+  .album-cover img {
+    width: 80%;
+    height: auto;
+  }
+
+  .album-info {
+    margin-left: 0;
+    margin-top: 1.5rem;
+  }
+
+  .titulo {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .musica-page {
+    padding: 1rem;
+  }
+
+  .musica-detalle {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .album-cover img {
+    width: 100%;
+    height: auto;
+  }
+
+  .album-info {
+    width: 100%;
+    margin: 0;
+  }
+
+  .titulo {
+    font-size: 1.6rem;
+  }
+
+  .cancion {
+    width: 45%;
+    min-height: auto;
+  }
+
+  .listacanciones {
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .cancion {
+    width: 100%;
+  }
+
+  .titulo {
+    font-size: 1.4rem;
+  }
+
+  .btn-reproducir,
+  .btn-lista,
+  .btn-eliminar {
+    width: 100%;
+    padding: 0.6rem;
+  }
+}
+@media (max-width: 600px) {
+  .botones {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .botones button {
+    width: 100%;
+    max-width: 250px;
+  }
+}
