@@ -10,6 +10,7 @@ import PaginaArtista from "../components/PaginaArtista";
 import PaginaCategoria from "../components/PaginaCategoria";
 import Suscripcion from "../components/Suscripciones";
 import Pago from "../components/Pago";
+import Error404 from "../pages/Error404";
 export default function App() {
   return (
     <BrowserRouter>
@@ -37,6 +38,7 @@ export default function App() {
         <Route path="/detalles/:nombreCancion" element={<Detalles />} />
         <Route path="/suscripcion" element={<Suscripcion />} />
         <Route path="/pago" element={<Pago />} />
+        <Route path="*" element={<Error404 />} />
       </Routes>
     </BrowserRouter>
   );
