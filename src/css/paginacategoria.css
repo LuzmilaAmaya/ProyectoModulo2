@@ -1,10 +1,12 @@
 .pagina-categoria {
-  color: #fff;
+  color: white;
   padding: 2rem;
   text-align: center;
 }
 
 .titulo-categoria {
+  background-color: #a46bff;
+  color: white;
   font-size: 2rem;
   margin-bottom: 1.5rem;
 }
@@ -13,6 +15,7 @@
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
   gap: 20px;
+  align-items: start;
 }
 
 .card-cancion {
@@ -21,23 +24,124 @@
   padding: 1rem;
   cursor: pointer;
   transition: transform 0.2s;
-}
-
-.card-cancion:hover {
-  transform: scale(1.05);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
 }
 
 .card-cancion img {
   width: 100%;
   border-radius: 10px;
   margin-bottom: 10px;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
 }
 
-.card-cancion h4 {
+.card-cancion h4,
+.card-cancion p {
   margin: 5px 0;
+  text-align: center;
 }
 
 .genero {
   font-size: 0.9rem;
   color: #a46bff;
+  text-align: center;
+}
+.card-cancion button {
+  background: #a46bff;
+  color: white;
+}
+.volver-pagcategorias {
+  border-radius: 20px;
+  margin-top: 30px;
+  background-color: #a46bff;
+  color: white;
+}
+/* adaptado */
+@media (max-width: 992px) {
+  .musica-detalle {
+    flex-direction: column;
+    text-align: center;
+    max-height: none;
+    padding: 1.5rem;
+  }
+
+  .album-cover img {
+    width: 80%;
+    height: auto;
+  }
+
+  .album-info {
+    margin-left: 0;
+    margin-top: 1.5rem;
+  }
+
+  .titulo {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .musica-page {
+    padding: 1rem;
+  }
+
+  .musica-detalle {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .album-cover img {
+    width: 100%;
+    height: auto;
+  }
+
+  .album-info {
+    width: 100%;
+    margin: 0;
+  }
+
+  .titulo {
+    font-size: 1.6rem;
+  }
+
+  .cancion {
+    width: 45%;
+    min-height: auto;
+  }
+
+  .listacanciones {
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .cancion {
+    width: 100%;
+  }
+
+  .titulo {
+    font-size: 1.4rem;
+  }
+
+  .btn-reproducir,
+  .btn-lista,
+  .btn-eliminar {
+    width: 100%;
+    padding: 0.6rem;
+  }
+}
+@media (max-width: 600px) {
+  .botones {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .botones button {
+    width: 100%;
+    max-width: 250px;
+  }
 }

@@ -13,7 +13,7 @@ export default function PaginaCategoria() {
 
   return (
     <div className="pagina-categoria">
-      <h2 className="titulo-categoria">{nombreCategoria}</h2>
+      <h2 className="titulo-categoria">{nombreCategoria}🎵</h2>
 
       <div className="grid-canciones">
         {cancionesFiltradas.length > 0 ? (
@@ -27,12 +27,18 @@ export default function PaginaCategoria() {
               <p className="genero">{cancion.genero}</p>
               <h4>{cancion.titulo}</h4>
               <p>{cancion.artista}</p>
+              <button>Play ▶</button>
             </div>
           ))
+          
         ) : (
           <p>No hay canciones en esta categoría 😢</p>
         )}
       </div>
+      <div>
+        <button className="volver-pagcategorias">volver al inicio</button>
+      </div>
     </div>
+    
   );
 }
