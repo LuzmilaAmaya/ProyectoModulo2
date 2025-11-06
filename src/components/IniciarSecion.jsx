@@ -1,10 +1,11 @@
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import { useForm } from "react-hook-form";
+import "../css/Registro.css";
 import { useNavigate } from "react-router-dom";
-import "../css/iniciosesion.css"; 
+import Swal from "sweetalert2";
 
-export default function FormRegister() {
+export default function InicioSesion() {
   const {
     register,
     handleSubmit,
@@ -18,45 +19,56 @@ export default function FormRegister() {
     },
   });
 
-  const navegacion = useNavigate();
+  const navigate = useNavigate();
 
-  function obtenerDelLocalStorage() {
-    const usuariosDelLocalStorage =
-      JSON.parse(localStorage.getItem("usuarios")) || [];
-    return usuariosDelLocalStorage;
+  function obtenerUsuariosDelLocalStorage() {
+    const usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
+    return usuarios;
   }
 
-  function guardarEnLocalStorage(nuevoListado) {
-    localStorage.setItem("usuarios", JSON.stringify(nuevoListado));
-  }
-
-  function onSubmit(data) {
+  function iniciarSesion(data) {
     try {
-      const nuevoUsuario = {
-        id: Date.now(),
-        email: data.email,
-        password: data.password,
-        createdAt: new Date().toISOString(),
-      };
+      const usuarios = obtenerUsuariosDelLocalStorage();
+      const usuarioEncontrado = usuarios.find(
+        (u) => u.email === data.email && u.password === data.password
+      );
 
-      const listadoUsuariosLS = obtenerDelLocalStorage();
-      guardarEnLocalStorage([...listadoUsuariosLS, nuevoUsuario]);
+      if (usuarioEncontrado) {
+        sessionStorage.setItem(
+          "usuarioActivo",
+          JSON.stringify(usuarioEncontrado)
+        );
 
-      alert("✅ Usuario registrado con éxito");
-      reset();
-      navegacion("/iniciarsesion");
+        Swal.fire({
+          icon: "success",
+          title: "¡Bienvenido!",
+          text: `Has iniciado sesión correctamente`,
+        });
+
+        reset();
+        navigate("/");
+      } else {
+        Swal.fire({
+          icon: "error",
+          title: "Oops...",
+          text: "Email o contraseña incorrectos",
+        });
+      }
     } catch (error) {
       console.log(error);
-      alert("❌ No se pudo crear el usuario");
+      Swal.fire({
+        icon: "error",
+        title: "Error",
+        text: "No se pudo iniciar sesión",
+      });
     }
   }
 
   return (
     <div className="login-modal">
       <div className="login-box">
-        <h2>Crear cuenta nueva</h2>
-        <Form onSubmit={handleSubmit(onSubmit)}>
-          {/* Campo de Email */}
+        <h2>Iniciar Sesión</h2>
+        <Form onSubmit={handleSubmit(iniciarSesion)}>
           <Form.Group className="form-group" controlId="formBasicEmail">
             <div className="input-icon">
               <span className="icon">📧</span>
@@ -103,13 +115,12 @@ export default function FormRegister() {
             </Form.Control.Feedback>
           </Form.Group>
 
-          <Button variant="primary" type="submit" className="login-btn">
-            Registrarse
+          <Button type="submit" className="login-btn">
+            Iniciar Sesión
           </Button>
 
           <p className="register-text mt-3">
-            ¿Ya tienes una cuenta?{" "}
-            <a href="/iniciarsesion">Inicia sesión aquí</a>
+            ¿No tienes cuenta? <a href="/registro">Regístrate aquí</a>
           </p>
         </Form>
       </div>
