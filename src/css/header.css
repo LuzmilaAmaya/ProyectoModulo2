@@ -29,8 +29,17 @@
 }
 
 .icono-usuario {
-  height: 45px;
+  width: 45px;
+  height: 55px;
   border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #845d94;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.icono-usuario:hover {
+  transform: scale(1.05);
 }
 
 .contenedor-carousel {
@@ -259,4 +268,19 @@ body {
 .contenedor-carousel {
   display: flex;
   justify-content: center;
+}
+
+.btn-logout {
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 8px 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-logout:hover {
+  background-color: #ff6666;
 }

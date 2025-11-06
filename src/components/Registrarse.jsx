@@ -1,5 +1,12 @@
 import { useState, useEffect } from "react";
-import { FaEnvelope, FaLock, FaEdit, FaTrash, FaUser, FaImage } from "react-icons/fa";
+import {
+  FaEnvelope,
+  FaLock,
+  FaEdit,
+  FaTrash,
+  FaUser,
+  FaImage,
+} from "react-icons/fa";
 import Swal from "sweetalert2";
 import "../css/Login.css";
 function Login() {
@@ -150,13 +157,13 @@ function Login() {
           <button type="submit" className="login-btn">
             Registrar
           </button>
-           <p className="politica-text">
-          Al registrarte aceptas nuestra
-          <a href="#">Política de Privacidad</a>
-        </p>
-        <p className="register-text">
-          ¿Ya tienes cuenta? <a href="./">Inicia sesión aquí</a>
-        </p>
+          <p className="politica-text">
+            Al registrarte aceptas nuestra
+            <a href="#">Política de Privacidad</a>
+          </p>
+          <p className="register-text">
+            ¿Ya tienes cuenta? <a href="./">Inicia sesión aquí</a>
+          </p>
         </form>
       </div>
     </div>
